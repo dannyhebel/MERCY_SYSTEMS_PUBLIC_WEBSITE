@@ -1,251 +1,239 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MERCY Systems | Deterministic Control Technology</title>
-<meta name="description" content="MERCY Systems develops deterministic control technology for robotics and autonomous systems, with private technical evaluations and measurable closed-loop results.">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MERCY Systems | Robotics Stability Evaluation</title>
+  <meta name="description" content="MERCY Systems runs paid side-by-side robotics stability evaluations comparing MERCY against your current control method.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="nav wrap">
-    <a class="brand" href="#top" aria-label="MERCY Systems home">
-      <img src="assets/mercy-systems-logo.png" alt="MERCY Systems logo">
-      <span>MERCY SYSTEMS</span>
-    </a>
+  <nav class="nav wrap" aria-label="Main navigation">
+    <a class="brand" href="#top">MERCY SYSTEMS</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <div class="nav-links">
       <a href="#service">Service</a>
+      <a href="#benchmark">8-Month Benchmark</a>
       <a href="#process">How It Works</a>
       <a href="#scope">Scope</a>
-      <a href="#benchmark">8-Month Benchmark</a>
-<a href="#contact">Contact</a>
-      <a class="btn btn-gold" href="#contact">Request an Evaluation</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-gold nav-cta" href="#contact">Request Evaluation</a>
     </div>
   </nav>
 </header>
 
 <main id="top">
 
-<section class="banner" aria-label="MERCY Systems deterministic control technology banner">
-  <img src="assets/mercy-website-thin-banner.png" alt="MERCY Systems — Deterministic Control Technology for Robotics and Autonomous Systems.">
+<section class="hero-banner" aria-label="MERCY Systems robotics stabilization banner">
+  <img src="assets/mercy-robotics-stabilization-banner.png"
+       alt="MERCY Systems Robotics Stabilization — proven higher accuracy, zero limit violations, faster control.">
 </section>
 
-<section class="section intro" id="service">
+<section class="section service" id="service">
   <div class="wrap">
-    <div class="eyebrow">Deterministic Control Technology</div>
-    <h1>Control performance you can measure before you integrate.</h1>
-    <p class="lead">MERCY Systems develops deterministic control technology for robotics and autonomous systems. We begin with a private, fixed-scope technical evaluation: compare MERCY against an agreed baseline on a representative control problem, measure the results, and determine whether a deeper pilot or licensing path is justified.</p>
+    <div class="section-label">Service</div>
+    <div class="service-grid">
+      <div>
+        <h1>Robotics Stability Evaluation</h1>
+        <p class="lead">We run paid side-by-side tests that compare MERCY against your current control method on robotics and autonomous systems workloads.</p>
+      </div>
+      <div class="result-card">
+        <div class="mini-label">You receive clear results on</div>
+        <div class="metric-pills">
+          <span>Tracking accuracy</span>
+          <span>Limit violations</span>
+          <span>Execution speed</span>
+        </div>
+        <p>Licensing is available only when MERCY shows a clear advantage.</p>
+      </div>
+    </div>
     <div class="hero-actions">
       <a class="btn btn-gold" href="#contact">Request an Evaluation</a>
-      <a class="btn btn-outline" href="#process">See How It Works</a>
+      <a class="btn btn-outline" href="#benchmark">See the 8-Month Benchmark</a>
     </div>
   </div>
 </section>
 
-<section class="section section-soft" id="process">
+<section class="section section-dark" id="benchmark">
   <div class="wrap">
-    <div class="eyebrow">How It Works</div>
-    <h2>Three simple steps.</h2>
-    <div class="grid-3">
-      <div class="card">
-        <div class="num">1</div>
-        <h3>You Define</h3>
-        <p>We agree on one representative control problem, the baseline to compare against, the operating boundaries, and the performance metrics that matter.</p>
+    <div class="section-label">8-Month Benchmark</div>
+    <div class="benchmark-head">
+      <div>
+        <h2>Eight-Month Head-to-Head Validation</h2>
+        <p class="lead">MERCY was evaluated against Büchi, a strong conventional baseline, over an extended closed-loop robotics test under high noise and large-scale conditions.</p>
       </div>
-      <div class="card">
-        <div class="num">2</div>
-        <h3>We Process & Verify</h3>
-        <p>MERCY is evaluated side-by-side against the agreed baseline under the defined test conditions. We measure tracking error, boundary violations, stability, and runtime.</p>
-      </div>
-      <div class="card">
-        <div class="num">3</div>
-        <h3>You Receive</h3>
-        <p>You receive a concise technical result package showing the measured comparison and the next-step recommendation:</p>
-        <ul class="file-list">
-          <li>Baseline vs. MERCY metrics</li>
-          <li>Constraint / violation results</li>
-          <li>Runtime and tracking results</li>
-        </ul>
-        <p class="small">If MERCY shows a meaningful advantage, the next step can be an extended pilot, integration discussion, or commercial license.</p>
+      <div class="validation-badge">
+        <strong>8 MONTHS</strong>
+        <span>Comparative closed-loop testing</span>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="section" id="scope">
-  <div class="wrap scope">
-    <div>
-      <div class="eyebrow">Current Production Scope</div>
-      <h2>Precisely defined service boundaries.</h2>
-      <p>MERCY Systems is currently focused on deterministic closed-loop control evaluation for robotics and autonomous systems. The first commercial step is a controlled technical evaluation rather than a broad production deployment.</p>
-      <ul class="checks">
-        <li>Robotics and autonomous-system control problems</li>
-        <li>Defined closed-loop test conditions and operating boundaries</li>
-        <li>Side-by-side comparison against an agreed baseline</li>
-        <li>Measured tracking error, stability, violations, and runtime</li>
-        <li>Private technical evaluations with a fixed, agreed scope</li>
-        <li>Approved, non-sensitive and unrestricted evaluation inputs only</li>
-      </ul>
+    <div class="benchmark-highlights">
+      <article class="stat-card">
+        <span class="stat-kicker">Final tracking error</span>
+        <strong>1.79 × 10<sup>−8</sup></strong>
+        <span>MERCY vs. 8.95 × 10<sup>−2</sup> Büchi</span>
+      </article>
+      <article class="stat-card">
+        <span class="stat-kicker">Velocity limit violations</span>
+        <strong>0</strong>
+        <span>MERCY vs. 21 Büchi</span>
+      </article>
+      <article class="stat-card">
+        <span class="stat-kicker">Time inside ±0.05</span>
+        <strong>63.5%</strong>
+        <span>MERCY vs. 20.4% Büchi</span>
+      </article>
+      <article class="stat-card">
+        <span class="stat-kicker">Closed-loop runtime</span>
+        <strong>0.00515 s</strong>
+        <span>MERCY vs. 0.00672 s Büchi</span>
+      </article>
     </div>
-    <aside class="scope-box">
-      <h3>What this service is</h3>
-      <p>A controlled evaluation of MERCY control technology against a defined baseline on a representative problem.</p>
-      <p>The goal is straightforward: establish measurable evidence before asking a customer to consider integration.</p>
-      <p><strong>Current benchmark evidence:</strong> in the tested MERCY V4 vs. Büchi V3 closed-loop benchmark, MERCY recorded 1.79×10⁻⁸ final error vs. 8.95×10⁻², 0 vs. 21 velocity violations, 63.5% vs. 20.4% time inside ±0.05, and 0.00515 s vs. 0.00672 s closed-loop runtime. These results were established through MERCY Systems' eight-month comparative control research program.</p>
-    </aside>
-  </div>
 
-  <div class="wrap benchmark-block" id="benchmark">
-    <div class="eyebrow">Featured Validation</div>
-    <h2>Eight-Month Comparative Control Study</h2>
-    <p class="benchmark-subhead"><strong>MERCY V4 vs. Büchi V3</strong></p>
-    <p class="lead">The featured result from an eight-month experimental research program comparing closed-loop control performance under defined test conditions, including randomized disturbance testing. The measurements below are the headline results from the selected MERCY V4 vs. Büchi V3 benchmark.</p>
     <div class="table-wrap">
       <table class="benchmark-table">
         <thead>
-          <tr><th>Metric</th><th>Büchi V3</th><th>MERCY V4</th><th>Measured Advantage</th></tr>
+          <tr>
+            <th>Metric</th>
+            <th>Büchi V3</th>
+            <th>MERCY V4</th>
+            <th>Result</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Final Error</td><td>8.95 × 10<sup>−2</sup></td><td><strong>1.79 × 10<sup>−8</sup></strong></td><td>~5 million× lower</td></tr>
-          <tr><td>Mean Abs Error</td><td>0.279</td><td><strong>0.192</strong></td><td>MERCY lower</td></tr>
-          <tr><td>Time inside ±0.05</td><td>20.4%</td><td><strong>63.5%</strong></td><td>~3× greater</td></tr>
-          <tr><td>Velocity violations</td><td>21</td><td><strong>0</strong></td><td>Zero in tested run</td></tr>
-          <tr><td>Position violations</td><td>0</td><td>0</td><td>Tie</td></tr>
-          <tr><td>Closed-loop runtime</td><td>0.00672 s</td><td><strong>0.00515 s</strong></td><td>~23% lower</td></tr>
+          <tr><td>Final Error</td><td>8.95 × 10<sup>−2</sup></td><td>1.79 × 10<sup>−8</sup></td><td>~5 million× lower</td></tr>
+          <tr><td>Mean Absolute Error</td><td>0.279</td><td>0.192</td><td>Lower</td></tr>
+          <tr><td>Time Inside ±0.05</td><td>20.4%</td><td>63.5%</td><td>~3× greater</td></tr>
+          <tr><td>Velocity Violations</td><td>21</td><td>0</td><td>Zero in tested run</td></tr>
+          <tr><td>Position Violations</td><td>0</td><td>0</td><td>Equal</td></tr>
+          <tr><td>Closed-Loop Runtime</td><td>0.00672 s</td><td>0.00515 s</td><td>~23% lower</td></tr>
         </tbody>
       </table>
     </div>
+
+    <p class="benchmark-close">This validation forms the foundation of our evaluation process. We apply the same disciplined side-by-side approach when working with client systems.</p>
   </div>
 </section>
 
-<section class="section section-soft" id="data">
+<section class="section" id="process">
   <div class="wrap">
-    <div class="eyebrow">Restricted-Input Service</div>
-    <h2>Only approved, non-sensitive evaluation inputs.</h2>
-    <p class="lead">MERCY Systems deliberately limits the information accepted for early technical evaluations so engagements remain controlled and customers do not disclose unnecessary sensitive information.</p>
+    <div class="section-label">How It Works</div>
+    <h2>One control problem. One fair comparison. One clear decision.</h2>
+    <div class="steps">
+      <article class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Discussion</h3>
+          <p>We review your control problem and confirm it is a good fit for evaluation.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Paid Evaluation</h3>
+          <p>We run a side-by-side comparison of MERCY versus your current method on the same workload.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Results</h3>
+          <p>You receive quantified results covering accuracy, limit violations, and execution speed.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Decision</h3>
+          <p>If MERCY shows a clear advantage, we discuss licensing. If it does not, the evaluation ends and you keep the full results.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <div class="two-col">
-      <div class="card">
-        <h3>Accepted by default</h3>
-        <ul class="checks">
-          <li>Approved control-test inputs required for the agreed evaluation</li>
-          <li>Non-sensitive, unrestricted data</li>
-          <li>Data the customer is authorized to provide</li>
-          <li>Only the information required for the contracted technical evaluation</li>
+<section class="section section-soft" id="scope">
+  <div class="wrap">
+    <div class="section-label">Scope</div>
+    <div class="scope-grid">
+      <div>
+        <h2>Focused, fixed-scope robotics control evaluations.</h2>
+        <p class="lead">Typical evaluations focus on closed-loop control performance under realistic conditions, including noise and large-scale demands.</p>
+        <p>Evaluations are fixed-scope and fixed-fee. Larger or multi-problem evaluations are available on request.</p>
+      </div>
+      <div class="scope-panel">
+        <h3>We measure</h3>
+        <ul class="check-list">
+          <li>Tracking accuracy / final error</li>
+          <li>Limit (constraint) violations</li>
+          <li>Percentage of time inside tolerance</li>
+          <li>Closed-loop execution speed</li>
         </ul>
       </div>
-      <div class="card">
-        <h3>Do not send</h3>
-        <p>Do not submit classified information, CUI, ITAR-controlled technical data, regulated export-controlled data requiring special handling, protected health information, personal/customer records, payment-card data, passwords, credentials, encryption keys, or other restricted information outside the approved operating environment.</p>
-      </div>
-    </div>
-
-    <div class="stop">
-      <strong>If classification or transfer restrictions are uncertain:</strong> do not transmit the files. Contact MERCY Systems first with a non-sensitive description of the situation.
     </div>
   </div>
 </section>
 
-<section id="evaluation-data-security" class="section">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Evaluation Data &amp; Security</span>
-      <h2>Approved, Non-Sensitive Engineering Inputs</h2>
-    </div>
-    <p>
-      MERCY Systems currently conducts technical evaluations using approved, non-sensitive engineering data.
-      Customers should not submit classified information, CUI, ITAR-controlled technical data, credentials,
-      personal information, or other restricted material without an appropriate handling agreement and approved environment.
-      Evaluation scope and permitted inputs are established before technical materials are exchanged.
-    </p>
-  </div>
-</section>
-
-<section class="section" id="contact">
+<section class="section contact" id="contact">
   <div class="wrap contact-grid">
     <div>
-      <img class="profile" src="assets/danny-hebel-profile.png" alt="Danny Hebel, Founder of MERCY Systems">
+      <div class="section-label">Contact</div>
+      <h2>Ready to run a side-by-side evaluation?</h2>
+      <p class="lead">Tell us about your robotics or autonomous control problem. We will confirm fit and outline the evaluation scope and fee.</p>
+      <p class="response-note">We respond to all serious inquiries within one business day.</p>
     </div>
-    <div>
-      <div class="eyebrow">Contact</div>
-      <h2>Discuss a technical evaluation.</h2>
-      <p class="lead">For the first inquiry, send only a short, non-sensitive description of the control problem, the current or proposed baseline, the operating boundaries you care about, and the performance issue you want evaluated. We can determine fit before any technical files are transferred.</p>
-
-      <p class="contact-line"><strong>Danny Hebel</strong><br>Founder, MERCY Systems</p>
-      <p class="contact-line"><strong>Email:</strong> <a href="mailto:Danny@mercysystems.com">Danny@mercysystems.com</a></p>
-
-      <div class="contact-links">
-        <a class="btn btn-gold" href="mailto:Danny@mercysystems.com?subject=MERCY%20Systems%20Technical%20Evaluation%20Inquiry">Email MERCY Systems</a>
-        <a class="btn btn-outline" href="https://www.linkedin.com/in/danny-hebel/" target="_blank" rel="noopener">Danny on LinkedIn</a>
-        <a class="btn btn-outline" href="https://www.linkedin.com/company/mercy-systems/" target="_blank" rel="noopener">MERCY Systems on LinkedIn</a>
+    <div class="contact-card">
+      <div class="contact-profile">
+        <img src="assets/danny-hebel-linkedin-profile.png" alt="Danny Hebel, Founder of MERCY Systems">
+        <div>
+          <strong>Danny Hebel</strong>
+          <span>Founder, MERCY Systems</span>
+        </div>
       </div>
+      <div class="contact-item">
+        <span>Email</span>
+        <a href="mailto:Danny@mercysystems.com?subject=MERCY%20Robotics%20Stability%20Evaluation">Danny@mercysystems.com</a>
+      </div>
+      <div class="contact-item">
+        <span>LinkedIn</span>
+        <a href="https://www.linkedin.com/in/danny-hebel/" target="_blank" rel="noopener">linkedin.com/in/danny-hebel</a>
+      </div>
+      <a class="btn btn-gold full" href="mailto:Danny@mercysystems.com?subject=MERCY%20Robotics%20Stability%20Evaluation">Start an Evaluation</a>
     </div>
-  </div>
-</section>
-
-<section class="section compact section-soft" id="privacy">
-  <div class="wrap legal-copy">
-    <div class="eyebrow">Privacy</div>
-    <h2>Privacy Policy</h2>
-    <p>This website is designed primarily to provide information about MERCY Systems and allow prospective customers to contact the company. MERCY Systems does not use this website as a public technical-data upload portal.</p>
-    <p>If you contact MERCY Systems by email or LinkedIn, the information you voluntarily provide may be used to respond to your inquiry, evaluate whether a technical evaluation fits the current operating scope, prepare commercial communications, and maintain normal business records.</p>
-    <p>Do not send restricted, classified, export-controlled, personal, health, payment-card, credential, encryption-key, or other sensitive information through the website, ordinary email, or LinkedIn unless MERCY Systems has explicitly approved a separate transfer procedure for the engagement.</p>
-    <p class="small">This website privacy notice is an operational website notice, not a substitute for engagement-specific contractual or regulatory terms.</p>
-  </div>
-</section>
-
-<section class="section compact" id="terms">
-  <div class="wrap legal-copy">
-    <div class="eyebrow">Website Terms</div>
-    <h2>Terms of Use</h2>
-    <p>Information on this website describes MERCY Systems' current control-technology evaluation offering at a high level and does not itself create a customer relationship, contract, performance guarantee, engineering certification, regulatory approval, or commitment to accept any proposed evaluation.</p>
-    <p>Any paid engagement is subject to the applicable written scope, commercial terms, test conditions, data-handling requirements, and customer agreement. MERCY Systems may reject proposed evaluations outside the current technical or data-acceptance envelope.</p>
-    <p>All proprietary software, algorithms, methods, workflows, branding, and internal implementation details remain the property of their respective owner unless otherwise agreed in writing.</p>
-  </div>
-</section>
-
-<section class="section compact section-soft" id="disclaimer">
-  <div class="wrap legal-copy">
-    <div class="eyebrow">Service Disclaimer</div>
-    <h2>Technical evaluation results require application-specific validation.</h2>
-    <p>MERCY Systems provides deterministic control technology and technical evaluations within a defined test scope. Benchmark or evaluation results are not, by themselves, engineering certification, regulatory approval, professional engineering advice, or a guarantee of downstream system safety, suitability, or production performance.</p>
-    <p>Customers remain responsible for independent validation, integration decisions, and all industry-specific, contractual, legal, regulatory, safety, and professional obligations applicable to their systems.</p>
-  </div>
-</section>
-
-<section class="section cta">
-  <div class="wrap cta-row">
-    <div>
-      <div class="kicker">Have a control problem worth testing?</div>
-      <h2>Start with a short, non-sensitive description.</h2>
-      <p>We can determine whether the problem fits the current evaluation scope before any technical files are transferred.</p>
-    </div>
-    <a class="btn btn-gold" href="mailto:Danny@mercysystems.com?subject=MERCY%20Systems%20Technical%20Evaluation%20Inquiry">Contact MERCY Systems</a>
   </div>
 </section>
 
 </main>
 
 <footer class="footer">
-  <div class="footer-inner">
+  <div class="wrap footer-row">
     <div>© 2026 MERCY Systems</div>
     <div class="footer-links">
       <a href="#service">Service</a>
-      <a href="#scope">Scope</a>
       <a href="#benchmark">8-Month Benchmark</a>
-<a href="#privacy">Privacy</a>
-      <a href="#terms">Terms</a>
-      <a href="#disclaimer">Disclaimer</a>
+      <a href="#process">How It Works</a>
+      <a href="#scope">Scope</a>
       <a href="#contact">Contact</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/danny-hebel/" target="_blank" rel="noopener">Personal LinkedIn</a>
-      <a href="https://www.linkedin.com/company/mercy-systems/" target="_blank" rel="noopener">Company LinkedIn</a>
     </div>
   </div>
 </footer>
 
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const links = document.querySelector('.nav-links');
+if (toggle && links) {
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+}
+</script>
 </body>
 </html>

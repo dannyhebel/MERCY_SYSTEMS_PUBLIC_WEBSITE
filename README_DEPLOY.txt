@@ -1,36 +1,19 @@
-MERCY SYSTEMS — ONE-PAGE WEBSITE V3
+MERCY SYSTEMS ROBOTICS STABILITY WEBSITE — V6
+================================================
 
-This version is intentionally a single professional scrolling web page.
+Primary service:
+Robotics Stability Evaluation
 
-Navigation stays on the same page:
-Service
-How It Works
-Scope
-Data Policy
-Contact
-Privacy
-Terms
-Disclaimer
+Navigation order:
+1. Service
+2. 8-Month Benchmark
+3. How It Works
+4. Scope
+5. Contact
 
-The approved thin banner is preserved.
+The website uses the exact uploaded Banner(1).png as the top banner.
 
-Included assets:
-- MERCY Systems company logo
-- Approved thin website banner
-- Danny Hebel profile image
+Deploy:
+Upload index.html, styles.css, and the assets folder together at the web root.
 
-Important:
-This site intentionally does NOT include a public customer-file upload form.
-Initial inquiries should contain only a short, non-sensitive description of the workload.
-
-Files:
-- index.html
-- styles.css
-- assets/
-
-LinkedIn:
-Personal: https://www.linkedin.com/in/danny-hebel/
-Company: https://www.linkedin.com/company/mercy-systems/
-
-Email:
-Danny@mercysystems.com
+V7 final touches: banner/header color blend corrected; LinkedIn profile photo added to Contact section.
