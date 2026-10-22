@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage your AMCDT subscription | Mercy Systems</title>
+<meta name="description" content="Update payment details, download invoices or cancel your AMCDT subscription.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Mercy Systems home">
+      <span class="brand-mark" aria-hidden="true" data-logo="assets/logo.png">M</span>
+      <span class="brand-text"><span class="brand-word"><span class="w-mercy">MERCY</span><span class="w-systems">Systems</span></span><small class="brand-tag">PRECISION TECHNOLOGY</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">AMCDT</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="trial.html">Free trial</a>
+      <a href="download.html">Download</a>
+      <a href="license.html">License</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section aria-labelledby="m-title">
+  <div class="wrap">
+    <h1 id="m-title">Manage your subscription</h1>
+    <p class="lead">Update your payment card, download invoices, or cancel a monthly or annual subscription in Stripe&rsquo;s secure customer portal.</p>
+    <form id="portal-form" class="card narrow" novalidate>
+      <div class="field">
+        <label for="portal-email">Email address used at checkout</label>
+        <input id="portal-email" name="email" type="email" autocomplete="email" required maxlength="254">
+      </div>
+      <div class="field">
+        <label for="portal-key">One of your AMCDT license keys</label>
+        <input id="portal-key" name="license_key" type="text" autocomplete="off" spellcheck="false" required maxlength="200" aria-describedby="portal-key-help">
+        <p id="portal-key-help" class="small muted">From your license email. We use the email and key together only to confirm the subscription is yours.</p>
+      </div>
+      <button class="btn" type="submit">Open the billing portal</button>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="small muted" id="portal-login-row" hidden>Prefer to sign in with a one-time code sent to your email? <a id="portal-login" href="#" rel="noopener">Sign in to the billing portal with your email</a>.</p>
+    <p class="small muted">Cancelling stops future renewals; your license keeps working until the end of the period you paid for. One-time (perpetual) licenses have no subscription, but you can still see your invoice in the portal. Refund requests (within 14 days of purchase): email <a href="mailto:danny@mercysystems.com">danny@mercysystems.com</a>.</p>
+  </div>
+</section>
+<script src="assets/js/manage.js" defer></script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>&copy; <span data-year>2026</span> Mercy Systems &middot; <a href="/">mercysystems.com</a> &middot; Precision Technology</div>
+    <div><a href="license.html">License Agreement</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="download.html">Download</a> &middot; <a href="trial.html">Free trial</a> &middot; <a href="manage.html">Manage subscription</a></div>
+    <div>Support: <a href="mailto:danny@mercysystems.com">danny@mercysystems.com</a> &middot; Mercy Systems, 398 Log Road, Spring City, Tennessee 37381</div>
+  </div>
+</footer>
+</body>
+</html>

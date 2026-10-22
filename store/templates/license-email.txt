@@ -1,0 +1,38 @@
+Hello {{NAME}},
+
+Thank you for purchasing AMCDT (Automotive Model-Code Diagnostic Tool) from Mercy Systems.
+
+Order: {{PLAN_LABEL}} - one license (one seat)
+License Agreement accepted at checkout: Version {{AGREEMENT_VERSION}}
+
+YOUR LICENSE KEY - one installation on one machine, used by one person at a time
+{{KEYS_TEXT}}
+Please keep this key confidential. Need another seat? Simply buy another license.
+
+DOWNLOAD
+{{DOWNLOAD_PAGE}}
+
+INSTALL (Ubuntu / Debian, 64-bit)
+  sudo apt install ./amcdt_{{VERSION}}_amd64.deb
+
+Then start AMCDT and enter your license key when asked. The key activates one machine.
+Moving to a replacement machine: up to 2 transfers in any 12 months.
+
+{{PLAN_NOTE}}
+
+MANAGE YOUR SUBSCRIPTION (payment details, invoices, cancel)
+{{MANAGE_URL}}
+Sign in there with your checkout email address and your license key.
+
+Refunds: you can request a full refund within 14 days of purchase by emailing {{SUPPORT_EMAIL}}.
+License Agreement: {{LICENSE_URL}}
+Privacy Policy: {{PRIVACY_URL}}
+
+AMCDT is a diagnostic tool only. It is not a functional-safety tool, Mercy
+Systems makes no ISO 26262 (or other safety-standard) claims for it, and no
+tool qualification is provided.
+
+Questions or support: {{SUPPORT_EMAIL}}
+
+Mercy Systems
+mercysystems.com

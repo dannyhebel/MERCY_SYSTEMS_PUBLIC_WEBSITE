@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Your AMCDT license</title></head>
+<body style="margin:0;padding:0;background:#000;color:#e8e8e8;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#000;">
+<tr><td align="center" style="padding:24px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#0d0d0d;border:1px solid #3a3220;">
+<tr><td style="padding:20px 24px;border-bottom:1px solid #3a3220;">
+  <span style="font-size:22px;font-weight:bold;color:#d4af37;letter-spacing:1px;">MERCY</span>
+  <span style="font-size:22px;color:#c0c0c0;letter-spacing:1px;"> Systems</span>
+</td></tr>
+<tr><td style="padding:24px;font-size:15px;line-height:1.55;">
+<p>Hello {{NAME}},</p>
+<p>Thank you for purchasing <strong>AMCDT</strong> (Automotive Model-Code Diagnostic Tool) from Mercy Systems.</p>
+<p><strong>Order:</strong> {{PLAN_LABEL}} &ndash; one license (one seat)<br>
+<strong>License Agreement accepted at checkout:</strong> Version {{AGREEMENT_VERSION}}</p>
+<h2 style="font-size:17px;color:#d4af37;margin:20px 0 8px;">Your license key</h2>
+<p style="margin:0 0 8px;">One installation on one machine, used by one person at a time.</p>
+{{KEYS_HTML}}
+<p>Please keep this key confidential. Need another seat? Simply buy another license.</p>
+<h2 style="font-size:17px;color:#d4af37;margin:20px 0 8px;">Download and install</h2>
+<p>Download page: <a href="{{DOWNLOAD_PAGE}}" style="color:#d4af37;">{{DOWNLOAD_PAGE}}</a></p>
+<p>Install on Ubuntu / Debian (64-bit):</p>
+<pre style="background:#000;border:1px solid #333;padding:10px;color:#e8e8e8;white-space:pre-wrap;">sudo apt install ./amcdt_{{VERSION}}_amd64.deb</pre>
+<p>Then start AMCDT and enter your license key when asked. The key activates one machine. Moving to a replacement machine: up to 2 transfers in any 12 months.</p>
+<p>{{PLAN_NOTE}}</p>
+<h2 style="font-size:17px;color:#d4af37;margin:20px 0 8px;">Manage your subscription</h2>
+<p>Update payment details, download invoices or cancel: <a href="{{MANAGE_URL}}" style="color:#d4af37;">{{MANAGE_URL}}</a><br>
+Sign in there with your checkout email address and your license key.</p>
+<p>Refunds: you can request a full refund within 14 days of purchase by emailing <a href="mailto:{{SUPPORT_EMAIL}}" style="color:#d4af37;">{{SUPPORT_EMAIL}}</a>.<br>
+License Agreement: <a href="{{LICENSE_URL}}" style="color:#d4af37;">{{LICENSE_URL}}</a><br>
+Privacy Policy: <a href="{{PRIVACY_URL}}" style="color:#d4af37;">{{PRIVACY_URL}}</a></p>
+<p style="font-size:13px;color:#a0a0a0;border-top:1px solid #333;padding-top:12px;">AMCDT is a diagnostic tool only. It is not a functional-safety tool, Mercy Systems makes no ISO 26262 (or other safety-standard) claims for it, and no tool qualification is provided.</p>
+<p>Questions or support: <a href="mailto:{{SUPPORT_EMAIL}}" style="color:#d4af37;">{{SUPPORT_EMAIL}}</a></p>
+</td></tr></table>
+</td></tr></table>
+</body></html>

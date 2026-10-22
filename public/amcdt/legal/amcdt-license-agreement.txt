@@ -1,0 +1,508 @@
+AMCDT END USER SOFTWARE LICENSE AGREEMENT
+
+Automotive Model-Code Diagnostic Tool ("AMCDT")
+Mercy Systems - mercysystems.com
+Version 1.0 - Effective October 22, 2026
+
+PLEASE READ THIS AGREEMENT CAREFULLY. BY CHECKING THE ACCEPTANCE BOX AT
+CHECKOUT, OR BY DOWNLOADING, INSTALLING, ACTIVATING, OR USING THE SOFTWARE,
+YOU AGREE TO THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT PURCHASE, INSTALL,
+ACTIVATE, OR USE THE SOFTWARE.
+
+This End User Software License Agreement (the "Agreement") is between Mercy
+Systems ("Mercy Systems", "we", "us", or "our"), a business organized under
+the laws of the State of Tennessee with its principal place of business
+at 398 Log Road, Spring City, Tennessee 37381, and the business entity
+that accepts this Agreement ("Licensee", "you", or "your"). If you accept
+this Agreement on behalf of a company or other organization, you represent
+that you have authority to bind that organization, and "you" means that
+organization. This Agreement takes effect on the date you accept it (the
+"Effective Date").
+
+1. ABOUT THE SOFTWARE
+
+1.1 What AMCDT does. AMCDT is a diagnostic software tool. It compares output
+traces from a model with output traces from corresponding code (for example,
+in CSV or MAT file format) and explains observed differences in plain
+language. Typical explanations include rounding, saturation, library mismatch,
+compiler effects, or a possible real bug.
+
+1.2 What AMCDT is not. AMCDT is an engineering aid only. Its explanations are
+suggestions to help your engineers investigate differences; they are not
+conclusions, approvals, or sign-offs. In particular:
+(a) AMCDT is not a functional-safety tool and is not designed, tested, or
+    intended to establish that any model, code, system, or product is correct
+    or safe.
+(b) Mercy Systems makes no claim that AMCDT complies with, or is qualified,
+    certified, or validated under, ISO 26262, IEC 61508, or any other
+    functional-safety, quality, or regulatory standard, and no tool
+    qualification or certification evidence is provided.
+(c) AMCDT is not a substitute for your own verification, validation, testing,
+    review, safety processes, and qualified engineering judgment, all of which
+    remain your responsibility.
+
+1.3 Business use only. AMCDT is offered only to businesses and professionals
+for business purposes. You represent that you are acquiring the Software in a
+business or professional capacity and not as a consumer for personal, family,
+or household purposes.
+
+2. DEFINITIONS
+
+In this Agreement:
+(a) "Software" means AMCDT, delivered as a downloadable Linux package (.deb)
+    from mercysystems.com, including any Updates we provide to you and any
+    related Documentation.
+(b) "Documentation" means the user guides, help files, and other written
+    materials about the Software that we make available.
+(c) "License Key" means the unique key that activates one Seat of the
+    Software.
+(d) "Seat" means one installation of the Software on one machine, used by no
+    more than one person at a time.
+(e) "Your Data" means the trace files and other data you load into the
+    Software.
+(f) "Output" means the reports, explanations, and other results the Software
+    generates from Your Data.
+(g) "Order" means your online purchase of one or more Seats through
+    mercysystems.com, including the pricing option, number of Seats, and fees
+    shown at checkout.
+(h) "Subscription Term" means, for a subscription, each paid period
+    described in Section 8: one month for a monthly subscription, or one year
+    for an annual subscription.
+(i) "Updates" means bug fixes, patches, and new versions of the Software that
+    we choose to make generally available to licensees.
+(j) "Keygen" means the third-party license-management service through which
+    License Keys are issued and managed.
+
+3. LICENSE GRANT
+
+3.1 Grant. Subject to your compliance with this Agreement and payment of all
+applicable fees, Mercy Systems grants you a limited, non-exclusive,
+non-transferable, non-sublicensable license to install and use the Software,
+in object-code form only, for your internal business purposes, on the number
+of Seats you have paid for, and only during the license period that applies to
+your pricing option (Section 8). This license may be terminated if you breach
+this Agreement.
+
+3.2 Your employees and contractors. You may permit your employees and
+individual contractors to use the Software on your behalf, provided each use
+occurs on a Seat you have licensed and you remain responsible for their
+compliance with this Agreement.
+
+3.3 License, not sale. The Software is licensed, not sold. You receive a right
+to use the Software, not ownership of it. Mercy Systems and its licensors keep
+all right, title, and interest in and to the Software and Documentation,
+including all intellectual property rights. All rights not expressly granted
+to you in this Agreement are reserved.
+
+3.4 Copies. You may make one backup copy of the installation package for
+archival purposes. Any copy must include all proprietary notices.
+
+4. RESTRICTIONS
+
+You must not, and must not allow anyone else to:
+(a) reverse engineer, decompile, disassemble, or otherwise try to derive the
+    source code, algorithms, or internal structure of the Software, except to
+    the extent applicable law expressly permits this despite this restriction;
+(b) bypass, disable, or circumvent any License Key, activation check, or other
+    technical protection in the Software;
+(c) share, publish, or disclose a License Key, or use one License Key for more
+    than one Seat;
+(d) sell, resell, rent, lease, lend, distribute, sublicense, or transfer the
+    Software or any License Key, except as allowed in Section 5.3;
+(e) use the Software for timesharing, as a service bureau, or to provide
+    hosted or processing services to third parties;
+(f) modify, translate, adapt, or create derivative works of the Software;
+(g) remove, alter, or obscure any copyright, trademark, or other proprietary
+    notice in the Software or Documentation;
+(h) use the Software, or knowledge gained from it, to build or help build a
+    competing product or service; or
+(i) use the Software in violation of any applicable law, including the export
+    control laws described in Section 18.
+
+5. LICENSE KEYS AND SEATS
+
+5.1 Delivery. After your payment is successfully processed, License Keys are
+issued and delivered automatically through Keygen. You need one License Key
+for each Seat.
+
+5.2 One key per Seat. Each License Key may be used for only one Seat. You are
+responsible for keeping your License Keys confidential and for all use of
+them. Tell us promptly through mercysystems.com if you believe a License Key
+has been lost, stolen, or used without permission.
+
+5.3 Moving a Seat to a replacement machine. You may move a Seat to a different
+machine (for example, when replacing hardware) by deactivating the Software on
+the old machine and activating it on the new one. You may do this up to 2
+times per Seat in any 12-month period. If you need more transfers, contact us
+through mercysystems.com and we will consider reasonable requests.
+
+5.4 Activation and checks. The Software may need to contact Keygen to activate
+a License Key and may periodically check that the License Key is valid. The
+Software may not operate if the License Key cannot be activated or validated,
+or if it has been suspended, deactivated, or revoked as allowed by this
+Agreement.
+
+5.5 Suspension and revocation. We may suspend, deactivate, or revoke a License
+Key if: (a) payment for it fails, is refunded, or is reversed (including
+through a chargeback); (b) it is used in breach of this Agreement, including
+use on more Seats than licensed; or (c) we reasonably believe it has been
+compromised. Where practical, we will notify you and give you a chance to fix
+the issue, except where immediate action is reasonably needed to protect the
+Software or other customers.
+
+6. YOUR DATA AND OUTPUT
+
+6.1 You own Your Data and Output. As between you and Mercy Systems, you own
+Your Data and the Output. We claim no ownership of them.
+
+6.2 Local processing. The Software is designed to process Your Data locally on
+your machine. In normal use, Mercy Systems does not receive Your Data or
+Output. If you choose to send us files (for example, to get support), we will
+use them only to help you and will handle them as your confidential
+information.
+
+6.3 License activation data. To activate and validate License Keys, the
+Software sends limited license-related information to Keygen, such as the
+License Key, a machine identifier or fingerprint, the Software version, and
+basic technical information needed for licensing. Purchase and account details
+(such as name, company, and email address) are collected at checkout. This
+information is used to deliver and manage licenses, prevent misuse, provide
+support, and handle billing. It is not your trace data. More information is
+available on mercysystems.com.
+
+6.4 Your responsibility for Your Data. You are responsible for having the
+rights to use Your Data with the Software and for keeping your own backups.
+
+7. UPDATES AND SUPPORT
+
+7.1 What is included. While your license includes support (see below), we will
+make Updates available for download from mercysystems.com when we release
+them, and provide email support requested through mercysystems.com:
+(a) Monthly or annual subscription: during each paid Subscription Term.
+(b) Perpetual license: for 12 months from the date of purchase. After that,
+    you may keep using the version you have, and we may offer optional paid
+    renewal of updates and support.
+
+7.2 Nature of support. Support is provided on a reasonable-efforts,
+as-available basis during our normal business hours. We do not guarantee
+response times, that every issue can be resolved, or that any particular
+feature will be developed. We may change or discontinue features in future
+versions.
+
+7.3 Updates are covered by this Agreement. Updates are part of the Software
+and are governed by this Agreement unless they come with different terms.
+
+8. PRICING OPTIONS, FEES, TAXES, AND REFUNDS
+
+Mercy Systems offers the following pricing options. The option that applies
+to you is the one shown in your Order.
+
+8.1 Option A - Monthly or annual subscription.
+(a) Term. A monthly subscription lasts for one month from purchase and renews
+    automatically for successive one-month Subscription Terms. An annual
+    subscription lasts for one year from purchase and renews automatically for
+    successive one-year Subscription Terms. Either renews unless you cancel
+    before the renewal date. We will remind you before renewal as required by
+    applicable law.
+(b) Cancellation. You may cancel renewal at any time through the method
+    provided on mercysystems.com or at checkout. Cancellation takes effect at
+    the end of the current paid Subscription Term, and you may keep using the
+    Software until then.
+(c) Failed renewal payment. If a renewal payment fails, you have a grace
+    period of 14 days to update your payment details. If payment is not
+    received by the end of the grace period, your License Keys will be
+    deactivated and your license will end.
+(d) End of subscription. When your subscription ends for any reason, your
+    right to use the Software ends and the License Keys will be deactivated.
+
+8.2 Option B - One-time perpetual license.
+(a) Term. In exchange for a one-time fee, your license to the version of the
+    Software you purchased, and any Updates you receive during your included
+    update period (Section 7.1(b)), continues indefinitely unless terminated
+    under Section 16.
+(b) Refunds and chargebacks. If the purchase fee is refunded, or a payment is
+    reversed or charged back, the license and its License Keys are revoked.
+
+8.3 Fees. You agree to pay all fees shown in your Order. Fees are stated and
+payable in the currency shown at checkout. Except as stated in Section 8.5,
+fees are non-refundable. We may change our prices for future purchases and
+renewals; for subscriptions, any price change will apply only from your next
+Subscription Term after we notify you in advance.
+
+8.4 Taxes. Fees do not include taxes unless stated at checkout. You are
+responsible for all sales, use, value-added, withholding, and similar taxes
+related to your purchase, except taxes on our net income.
+
+8.5 Refunds. You may request a full refund within 14 days from the date of
+purchase by contacting us through mercysystems.com. When a refund is issued,
+the related License Keys will be revoked and you must uninstall the Software.
+Refunds are not available after 14 days, including for subscription renewals,
+except where required by law.
+
+8.6 Payment processing. Payments may be processed by a third-party payment
+processor or reseller, whose own terms may also apply to the payment
+transaction.
+
+8.7 Failed payments and chargebacks generally. If any payment fails, is
+reversed, or is charged back, we may suspend or revoke the affected License
+Keys until the matter is resolved, as described in Section 5.5.
+
+8.8 Free trial. We may offer a free 14-day trial. A trial requires a valid
+email address and no payment. Trial License Keys are limited to one per
+person or business unless we agree otherwise, and they expire automatically
+14 days after they are issued. When the trial ends, the Software stops
+running analyses until you purchase a license. During the trial this
+Agreement applies to your use of the Software, except that no fees are due
+and Sections 7 and 8.5 do not apply. The trial is provided for evaluation
+only, and the warranty disclaimer in Section 12 and the limitation of
+liability in Section 13 apply in full.
+
+9. CONFIDENTIALITY OF THE SOFTWARE
+
+The Software, its Documentation, and any non-public information about them
+(including License Keys and any non-public pricing or technical information)
+are Mercy Systems' confidential information. You will use them only as allowed
+by this Agreement, protect them with at least reasonable care, and not
+disclose them to anyone other than your employees and contractors who need
+access to use the Software for you and who are bound by confidentiality
+obligations at least as protective as these. This does not apply to
+information that is or becomes public through no fault of yours, that you
+already lawfully had, or that you independently develop. You may disclose
+confidential information if required by law, after giving us reasonable notice
+where legally allowed.
+
+10. FEEDBACK
+
+If you give us suggestions, ideas, or other feedback about the Software, you
+grant us a perpetual, irrevocable, worldwide, royalty-free right to use and
+incorporate that feedback without restriction or obligation to you. We will
+not identify you publicly as the source of feedback without your permission.
+Feedback does not include Your Data or Output.
+
+11. THIRD-PARTY AND OPEN-SOURCE COMPONENTS
+
+The Software may include third-party components, including open-source
+software. These components are listed, with their applicable license terms, in
+the notices file included with the Software installation package. To the
+extent the license for a component requires different terms, those terms apply
+to that component and take precedence over this Agreement for that component
+only. Nothing in this Agreement limits your rights under those licenses.
+
+12. WARRANTY DISCLAIMER
+
+12.1 THE SOFTWARE, DOCUMENTATION, OUTPUT, UPDATES, AND SUPPORT ARE PROVIDED
+"AS IS" AND "AS AVAILABLE", WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MERCY SYSTEMS AND ITS
+LICENSORS AND SUPPLIERS DISCLAIM ALL WARRANTIES, CONDITIONS, AND
+REPRESENTATIONS, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING
+ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+TITLE, NON-INFRINGEMENT, QUIET ENJOYMENT, AND ACCURACY, AND ANY WARRANTIES
+ARISING FROM COURSE OF DEALING OR USAGE OF TRADE.
+
+12.2 WITHOUT LIMITING SECTION 12.1, MERCY SYSTEMS DOES NOT WARRANT THAT:
+(a) THE SOFTWARE OR ANY OUTPUT IS ACCURATE, COMPLETE, OR RELIABLE;
+(b) THE SOFTWARE WILL DETECT EVERY DIFFERENCE, MISMATCH, DEFECT, OR BUG, OR
+    WILL CORRECTLY EXPLAIN OR CLASSIFY ANY DIFFERENCE IT DETECTS;
+(c) THE SOFTWARE IS SUITABLE FOR, OR MAY BE RELIED ON IN, ANY SAFETY-CRITICAL,
+    SAFETY-RELATED, OR REGULATED USE, OR THAT IT MEETS THE REQUIREMENTS OF ISO
+    26262 OR ANY OTHER FUNCTIONAL-SAFETY OR REGULATORY STANDARD; OR
+(d) THE SOFTWARE WILL OPERATE WITHOUT INTERRUPTION OR ERROR, WILL BE
+    COMPATIBLE WITH ANY PARTICULAR SYSTEM, TOOL, OR FILE, OR THAT ALL ERRORS
+    WILL BE CORRECTED.
+
+12.3 YOU ARE SOLELY RESPONSIBLE FOR INDEPENDENTLY REVIEWING AND CONFIRMING ANY
+OUTPUT BEFORE RELYING ON IT. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF
+CERTAIN WARRANTIES, SO SOME OF THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU, IN
+WHICH CASE THOSE WARRANTIES ARE LIMITED TO THE SHORTEST PERIOD AND NARROWEST
+SCOPE PERMITTED BY LAW.
+
+13. LIMITATION OF LIABILITY
+
+13.1 NO LIABILITY FOR MISSED OR MISCLASSIFIED ISSUES. YOU ACKNOWLEDGE THAT THE
+SOFTWARE PROVIDES DIAGNOSTIC SUGGESTIONS ONLY. TO THE MAXIMUM EXTENT PERMITTED
+BY APPLICABLE LAW, MERCY SYSTEMS WILL NOT BE LIABLE FOR ANY LOSS, DAMAGE,
+CLAIM, OR COST ARISING FROM OR RELATED TO YOUR OR ANY THIRD PARTY'S RELIANCE
+ON THE SOFTWARE OR ANY OUTPUT, INCLUDING WHERE A REAL BUG, DEFECT, MISMATCH,
+OR SAFETY ISSUE IS NOT DETECTED, IS EXPLAINED INCORRECTLY, OR IS MISCLASSIFIED
+(FOR EXAMPLE, AS A ROUNDING, SATURATION, LIBRARY, OR COMPILER EFFECT).
+
+13.2 EXCLUSION OF CERTAIN DAMAGES. TO THE MAXIMUM EXTENT PERMITTED BY
+APPLICABLE LAW, IN NO EVENT WILL MERCY SYSTEMS OR ITS LICENSORS OR SUPPLIERS
+BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR
+PUNITIVE DAMAGES, OR FOR ANY: LOSS OF PROFITS, REVENUE, BUSINESS, CONTRACTS,
+GOODWILL, OR ANTICIPATED SAVINGS; LOSS OR CORRUPTION OF DATA; COST OF
+SUBSTITUTE GOODS OR SERVICES; PRODUCT RECALL, FIELD ACTION, REWORK, OR
+WARRANTY COSTS; PRODUCT LIABILITY CLAIMS; OR PROPERTY DAMAGE, PERSONAL INJURY,
+OR DEATH ARISING FROM YOUR PRODUCTS OR SYSTEMS, IN EACH CASE ARISING OUT OF OR
+RELATED TO THIS AGREEMENT OR THE SOFTWARE, WHETHER IN CONTRACT, TORT
+(INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER THEORY, EVEN IF MERCY
+SYSTEMS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+13.3 LIABILITY CAP. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE
+TOTAL LIABILITY OF MERCY SYSTEMS AND ITS LICENSORS AND SUPPLIERS FOR ALL
+CLAIMS ARISING OUT OF OR RELATED TO THIS AGREEMENT OR THE SOFTWARE WILL NOT
+EXCEED THE TOTAL FEES YOU ACTUALLY PAID TO MERCY SYSTEMS FOR THE SOFTWARE IN
+THE 12 MONTHS IMMEDIATELY BEFORE THE EVENT GIVING RISE TO THE CLAIM.
+
+13.4 APPLICATION. THESE LIMITATIONS APPLY EVEN IF A LIMITED REMEDY FAILS OF
+ITS ESSENTIAL PURPOSE. THE FEES FOR THE SOFTWARE REFLECT THIS ALLOCATION OF
+RISK, WHICH IS AN ESSENTIAL BASIS OF THE BARGAIN BETWEEN THE PARTIES. NOTHING
+IN THIS AGREEMENT LIMITS OR EXCLUDES LIABILITY THAT CANNOT BE LIMITED OR
+EXCLUDED UNDER APPLICABLE LAW, SUCH AS, WHERE APPLICABLE, LIABILITY FOR FRAUD,
+GROSS NEGLIGENCE, OR WILLFUL MISCONDUCT, OR FOR DEATH OR PERSONAL INJURY
+CAUSED BY NEGLIGENCE.
+
+14. YOUR RESPONSIBILITY FOR YOUR PRODUCTS
+
+You are solely responsible for the design, development, verification,
+validation, testing, safety, regulatory compliance, certification, and release
+of your models, code, systems, and products, and of any products into which
+they are incorporated. You are responsible for deciding whether and how to use
+any Output, and for applying your own safety processes and qualified
+engineering judgment. You will not represent to any customer, regulator, or
+other third party that the Software or Mercy Systems has qualified, certified,
+approved, or assured the safety or correctness of any of your models, code,
+systems, or products.
+
+15. INDEMNITY BY YOU
+
+To the extent permitted by applicable law, you will defend, indemnify, and
+hold harmless Mercy Systems and its owners, employees, and contractors from
+and against any third-party claims, and related losses, damages, liabilities,
+costs, and reasonable attorneys' fees, arising from or related to: (a) your
+models, code, systems, or products, or any products into which they are
+incorporated, including product liability, recall, personal injury, and
+property damage claims; (b) your use of the Software or any Output, including
+reliance on any Output; (c) Your Data; or (d) your breach of this Agreement or
+violation of law. We will notify you promptly of any such claim, allow you to
+control its defense (provided you may not settle a claim that imposes
+obligations on us without our consent, which we will not unreasonably
+withhold), and give reasonable cooperation at your expense.
+
+16. TERM AND TERMINATION
+
+16.1 Term. This Agreement starts on the Effective Date and continues for the
+license period that applies to your pricing option under Section 8, unless
+terminated earlier under this Section.
+
+16.2 Termination by you. You may terminate this Agreement at any time by
+uninstalling the Software and destroying all copies. Termination by you does
+not entitle you to a refund except as stated in Section 8.5.
+
+16.3 Termination by us. We may terminate this Agreement, or the license for
+any affected Seats, by notice to you if: (a) you fail to pay fees when due
+(subject to the grace period in Section 8.1(c) for subscription renewals); (b)
+a payment is refunded, reversed, or charged back; or (c) you breach this
+Agreement and, if the breach can be fixed, you do not fix it within 14 days
+after we notify you. We may terminate immediately on notice for a breach of
+Section 4 (Restrictions) or Section 18 (Export Controls).
+
+16.4 Effect of termination. When this Agreement or a license ends for any
+reason: (a) your right to use the affected Software ends immediately; (b) you
+must stop using and uninstall the Software and destroy all copies, including
+backups; and (c) the related License Keys will be deactivated. You keep all
+Your Data and Output.
+
+16.5 Survival. Sections 3.3, 4, 6.1, 9, 10, 11, 12, 13, 14, 15, 16.4, 16.5,
+and 17 through 21, and any accrued payment obligations, survive termination.
+
+17. GOVERNING LAW AND VENUE
+
+This Agreement is governed by the laws of the State of Tennessee, without regard
+to its conflict-of-laws rules. The United Nations Convention on Contracts for
+the International Sale of Goods and the Uniform Computer Information
+Transactions Act (where enacted) do not apply. Each party agrees that any
+dispute arising out of or related to this Agreement will be brought
+exclusively in the state or federal courts located in Tennessee, and each party
+consents to the personal jurisdiction of those courts. Either party may seek
+temporary injunctive relief in any court of competent jurisdiction to protect
+its intellectual property or confidential information.
+
+18. EXPORT CONTROLS AND SANCTIONS
+
+The Software may be subject to United States and other export control and
+economic sanctions laws. You will comply with all such laws. You represent
+that you are not located in, organized under the laws of, or ordinarily
+resident in any country or region subject to comprehensive U.S. sanctions, and
+that you are not named on, or owned or controlled by anyone named on, any U.S.
+government restricted-party list. You will not export, re-export, or transfer
+the Software, or allow it to be accessed, in violation of those laws, or use
+it for any prohibited end use.
+
+19. U.S. GOVERNMENT END USERS
+
+The Software and Documentation are "commercial computer software" and
+"commercial computer software documentation" as those terms are used in the
+Federal Acquisition Regulation (FAR) and the Defense Federal Acquisition
+Regulation Supplement (DFARS). Under FAR 12.212 and DFARS 227.7202, as
+applicable, U.S. Government end users acquire the Software and Documentation
+only with the rights set out in this Agreement.
+
+20. GENERAL TERMS
+
+20.1 Entire agreement. This Agreement, together with your Order, is the entire
+agreement between you and Mercy Systems about the Software and replaces all
+prior or contemporaneous understandings about it. Any terms in your purchase
+order or other documents are rejected and have no effect. If this Agreement
+conflicts with your Order, this Agreement controls unless the Order expressly
+says otherwise.
+
+20.2 Changes to this Agreement. We may update this Agreement for future
+purchases and renewals by posting a new version on mercysystems.com. The
+version you accepted applies to your current purchase or Subscription Term; an
+updated version applies to your next renewal if we notify you before the
+renewal date.
+
+20.3 Severability. If any part of this Agreement is held invalid or
+unenforceable, it will be enforced to the maximum extent permitted, and the
+rest of this Agreement will remain in effect.
+
+20.4 Assignment. You may not assign or transfer this Agreement or any license
+without our prior written consent. We may assign this Agreement in connection
+with a merger, acquisition, reorganization, or sale of all or substantially
+all of the business or assets related to the Software. Any prohibited
+assignment is void.
+
+20.5 Notices. We may give you notices by email to the address associated with
+your purchase or by posting on mercysystems.com. You may give us notices
+by email to danny@mercysystems.com, or by mail to Mercy Systems
+at 398 Log Road, Spring City, Tennessee 37381. Notices are effective when
+received.
+
+20.6 No waiver. A failure or delay in enforcing any part of this Agreement is
+not a waiver of that right.
+
+20.7 Force majeure. Neither party is liable for any delay or failure to
+perform (other than payment obligations) caused by events beyond its
+reasonable control, such as natural disasters, epidemics, war, terrorism,
+labor disputes, government action, or failures of the internet, utilities, or
+third-party services (including Keygen or payment processors).
+
+20.8 Independent parties. The parties are independent contractors. Nothing in
+this Agreement creates a partnership, joint venture, agency, or employment
+relationship.
+
+20.9 No third-party beneficiaries. Except for the licensors and suppliers of
+Mercy Systems referred to in Sections 12 and 13, and the persons protected
+under Section 15, nobody other than you and Mercy Systems has rights under
+this Agreement.
+
+20.10 Electronic acceptance. You agree that checking the acceptance box at
+checkout, or installing, activating, or using the Software, is your electronic
+signature and acceptance of this Agreement, with the same effect as a
+handwritten signature. We recommend that you save or print a copy of this
+Agreement for your records.
+
+20.11 Headings and language. Headings are for convenience only. "Including"
+means "including without limitation". This Agreement is written in English,
+and the English version controls over any translation.
+
+21. CONTACT
+
+Mercy Systems
+398 Log Road, Spring City, Tennessee 37381
+Email: danny@mercysystems.com
+Website: mercysystems.com
+
+Questions about this Agreement, License Keys, refunds, or support can be sent
+to danny@mercysystems.com.

@@ -1,0 +1,39 @@
+Hello,
+
+Here is your free 14-day AMCDT trial key (Automotive Model-Code Diagnostic Tool, by Mercy Systems).
+No credit card is needed.
+
+YOUR TRIAL KEY (one machine)
+  {{TRIAL_KEY}}
+
+Trial ends: {{TRIAL_END}}
+(The {{TRIAL_DAYS}} days start when this key is issued.)
+
+1. DOWNLOAD
+   {{DOWNLOAD_PAGE}}
+
+2. INSTALL (Ubuntu / Debian, 64-bit)
+   sudo apt install ./amcdt_{{VERSION}}_amd64.deb
+
+3. START AMCDT and enter the trial key when asked.
+   AMCDT checks the key over the internet while the trial is active. Your trace
+   files and reports stay on your machine.
+
+When the trial ends, AMCDT stops running new analyses until you buy a license.
+Reports you have already created stay on your machine. You can buy at any time:
+  {{BUY_URL}}
+
+One trial per company email address and per machine, please.
+License Agreement (Version {{AGREEMENT_VERSION}}): {{LICENSE_URL}}
+Privacy Policy: {{PRIVACY_URL}}
+
+AMCDT is a diagnostic tool only. It is not a functional-safety tool, Mercy
+Systems makes no ISO 26262 (or other safety-standard) claims for it, and no
+tool qualification is provided.
+
+Questions or support: {{SUPPORT_EMAIL}}
+
+If you did not request this trial, you can ignore this email.
+
+Mercy Systems
+mercysystems.com

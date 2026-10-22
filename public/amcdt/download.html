@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download AMCDT for Linux | Mercy Systems</title>
+<meta name="description" content="Download the AMCDT Linux package, checksum, system requirements and install steps.">
+<link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Mercy Systems home">
+      <span class="brand-mark" aria-hidden="true" data-logo="assets/logo.png">M</span>
+      <span class="brand-text"><span class="brand-word"><span class="w-mercy">MERCY</span><span class="w-systems">Systems</span></span><small class="brand-tag">PRECISION TECHNOLOGY</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">AMCDT</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="trial.html">Free trial</a>
+      <a href="download.html" aria-current="page">Download</a>
+      <a href="license.html">License</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section aria-labelledby="dl-title">
+  <div class="wrap">
+    <h1 id="dl-title">Download AMCDT</h1>
+    <p class="lead">AMCDT for Linux, version <span data-config="productVersion">[VERSION]</span>. You need a license key (paid or <a href="trial.html">free 14-day trial</a>) to use it.</p>
+    <p><a class="btn" href="/downloads/amcdt_[VERSION]_amd64.deb" data-href-template="/downloads/amcdt_{VERSION}_amd64.deb" download>Download amcdt_<span data-config="productVersion">[VERSION]</span>_amd64.deb</a></p>
+
+    <h2>Check the download (optional)</h2>
+    <p>SHA-256 checksum:</p>
+    <pre class="checksum"><code id="sha"><span data-config="debSha256">[SHA256_OF_DEB]</span></code></pre>
+    <p><button type="button" class="btn btn-outline copy-btn" data-copy-target="sha">Copy checksum</button></p>
+    <p>In a terminal, in the folder where you saved the file, run the command below. The result must match the checksum above.</p>
+    <pre><code>sha256sum amcdt_<span data-config="productVersion">[VERSION]</span>_amd64.deb</code></pre>
+
+    <h2>System requirements</h2>
+    <p data-config="systemRequirements">[SYSTEM_REQUIREMENTS]</p>
+    <p class="small muted">64-bit (amd64) Linux with the apt package manager, such as Ubuntu or Debian. An internet connection is needed to activate the license key.</p>
+
+    <h2>Install</h2>
+    <pre><code>cd ~/Downloads
+sudo apt install ./amcdt_<span data-config="productVersion">[VERSION]</span>_amd64.deb</code></pre>
+    <p>To remove it later: <code>sudo apt remove amcdt</code></p>
+
+    <h2>Enter your license key</h2>
+    <ol>
+      <li>Start AMCDT from your applications menu (or run <code>amcdt</code> in a terminal).</li>
+      <li>On first start, AMCDT asks for a license key. Paste the key from your email or from the purchase page and confirm.</li>
+      <li>AMCDT activates the key for this machine. Each key works on one machine; buy one license per machine.</li>
+      <li>Replacing a computer? You can move a license to a new machine up to 2 times in any 12 months. Email <a href="mailto:danny@mercysystems.com">danny@mercysystems.com</a> if you need help.</li>
+    </ol>
+    <p class="notice">Don&rsquo;t have a key yet? <a href="trial.html">Start a free 14-day trial</a> (no credit card) or <a href="index.html#pricing">buy a license</a>.</p>
+    <p class="disclaimer" id="disclaimer"><strong>Diagnostic tool only.</strong> AMCDT helps your engineers find and understand differences between model and code outputs. It is not a functional-safety tool and does not establish that any model, code, or product is correct or safe. Mercy Systems makes no ISO&nbsp;26262 (or other safety-standard) claims for AMCDT, and no tool qualification or certification evidence is provided. Your own engineering review and safety processes remain your responsibility. See the <a href="license.html">License Agreement</a>.</p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>&copy; <span data-year>2026</span> Mercy Systems &middot; <a href="/">mercysystems.com</a> &middot; Precision Technology</div>
+    <div><a href="license.html">License Agreement</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="download.html">Download</a> &middot; <a href="trial.html">Free trial</a> &middot; <a href="manage.html">Manage subscription</a></div>
+    <div>Support: <a href="mailto:danny@mercysystems.com">danny@mercysystems.com</a> &middot; Mercy Systems, 398 Log Road, Spring City, Tennessee 37381</div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "amcdt-store-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Checkout, license delivery and webhook backend for the AMCDT pages on mercysystems.com (DigitalOcean App Platform service)",
+  "main": "src/server.js",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "express": "^5.3.0",
+    "nodemailer": "^10.1.7",
+    "stripe": "^23.0.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
+  }
+}
