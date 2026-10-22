@@ -1,4 +1,148 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AMCDT - Buy</title>
-<script>location.replace('/amcdt/buy.html'+location.search+location.hash);</script>
-<meta http-equiv="refresh" content="0;url=/amcdt/buy.html"></head>
-<body><p><a href="/amcdt/buy.html">Continue to AMCDT purchase page</a></p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMCDT - Automotive Model-Code Diagnostic Tool | Mercy Systems</title>
+<meta name="description" content="AMCDT pinpoints exactly where model and code outputs differ and what is causing it. 14-day free trial, no credit card.">
+<link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Mercy Systems home">
+      <span class="brand-mark" aria-hidden="true" data-logo="assets/logo.png">M</span>
+      <span class="brand-text"><span class="brand-word"><span class="w-mercy">MERCY</span><span class="w-systems">Systems</span></span><small class="brand-tag">PRECISION TECHNOLOGY</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">AMCDT</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="trial.html">Free trial</a>
+      <a href="download.html">Download</a>
+      <a href="license.html">License</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <h1 id="hero-title"><span class="product-name">AMCDT</span> &mdash; Automotive Model-Code Diagnostic Tool</h1>
+    <p class="lead">AMCDT pinpoints exactly where your model and code outputs differ and what is causing it, so your team stops spending countless hours and manpower searching and can fix the problem right away.</p>
+    <div class="cta-row">
+      <a class="btn" href="trial.html">Start your 14-day free trial &mdash; no credit card</a>
+      <a class="btn btn-outline" href="#pricing">See pricing</a>
+    </div>
+    <p class="small muted mt-s">Linux (.deb) &middot; runs on your own machine &middot; $59/month, $590/year, or $1,490 one-time</p>
+  </div>
+</section>
+
+<section aria-labelledby="problem-title">
+  <div class="wrap">
+    <h2 id="problem-title">Stop hunting for mismatches</h2>
+    <p class="lead">When model output and code output disagree, finding the first bad signal and the reason behind it can take days of side-by-side plotting. AMCDT does the searching for you: it shows which signal is off, the exact point where the difference starts, and the most likely cause, written in plain language your whole team can act on.</p>
+  </div>
+</section>
+
+<section aria-labelledby="how-title">
+  <div class="wrap">
+    <h2 id="how-title">How it works</h2>
+    <ol class="steps">
+      <li><h3>Load your traces</h3><p>Open the output traces from your model and from your generated or hand-written code. CSV and MAT files are supported.</p></li>
+      <li><h3>Run</h3><p>AMCDT lines the traces up and checks every signal, sample by sample, for differences.</p></li>
+      <li><h3>Read the answer and export</h3><p>Each mismatch is listed with the signal, where it starts, and what is causing it, in plain language. Export the result as an HTML or JSON report.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section aria-labelledby="features-title">
+  <div class="wrap">
+    <h2 id="features-title">What you get</h2>
+    <ul class="features">
+      <li><strong>Every mismatch pinpointed</strong>Which signal differs and the exact sample and time where the difference starts.</li>
+      <li><strong>The likely cause, named</strong>Rounding, saturation, library mismatch, compiler effect, or a real bug that needs a closer look.</li>
+      <li><strong>Plain-language explanations</strong>Clear findings that engineers, leads, and customers can all read.</li>
+      <li><strong>HTML and JSON reports</strong>Share a readable report, or feed the JSON into your own tools and records.</li>
+      <li><strong>Your data stays with you</strong>Analysis runs locally on your machine. Trace files are never uploaded; only the license check goes online.</li>
+      <li><strong>Built for small teams</strong>Simple licensing for suppliers, Tier 2 / Tier 3 companies, and engineering consultancies: one license per engineer&rsquo;s machine, monthly, yearly, or one-time.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <h2 id="pricing-title">Pricing</h2>
+    <p class="notice"><strong>Not sure yet?</strong> Try AMCDT free for 14 days &mdash; no credit card needed. <a href="trial.html">Start your free trial</a>.</p>
+    <p class="muted">Every plan is one license: one installation on one machine, used by one person at a time. License keys may not be shared. Prices in US dollars, excluding any applicable sales tax or VAT.</p>
+<div class="agree">
+  <input type="checkbox" id="agree" name="agree" required aria-describedby="agree-help">
+  <label for="agree">I agree to the <a href="license.html" target="_blank" rel="noopener">AMCDT License Agreement</a> (Version <span data-config="licenseAgreementVersion">1.0</span>) on behalf of my company.</label>
+</div>
+<p id="agree-help" class="small muted">You must accept the License Agreement before buying. Opens in a new tab. How we handle your information: <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+    <p id="agree-status" class="status" role="alert"></p>
+    <div class="pricing">
+      <form class="card" data-checkout data-plan="monthly" aria-labelledby="monthly-title">
+        <span class="badge">Monthly subscription</span>
+        <h3 id="monthly-title">Monthly</h3>
+        <p class="price"><span data-config="priceMonthly">$59</span> <small>/ month</small></p>
+        <ul>
+          <li>All updates while subscribed</li>
+          <li>Email support while subscribed</li>
+          <li>Renews monthly; cancel any time</li>
+          <li>14-day grace period if a renewal payment fails</li>
+        </ul>
+        <button class="btn" type="submit">Buy Now &mdash; Monthly</button>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+      <form class="card featured" data-checkout data-plan="annual" aria-labelledby="annual-title">
+        <span class="badge">Annual subscription</span>
+        <h3 id="annual-title">Annual</h3>
+        <p class="price"><span data-config="priceAnnual">$590</span> <small>/ year</small></p>
+        <ul>
+          <li>All updates while subscribed</li>
+          <li>Email support while subscribed</li>
+          <li>Renews yearly; cancel any time</li>
+          <li>14-day grace period if a renewal payment fails</li>
+        </ul>
+        <button class="btn" type="submit">Buy Now &mdash; Annual</button>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+      <form class="card" data-checkout data-plan="perpetual" aria-labelledby="perpetual-title">
+        <span class="badge">One-time purchase</span>
+        <h3 id="perpetual-title">One-time (perpetual)</h3>
+        <p class="price"><span data-config="pricePerpetual">$1,490</span> <small>one-time</small></p>
+        <ul>
+          <li>Use the purchased version with no expiry</li>
+          <li>Updates and email support for 12 months</li>
+          <li>No subscription</li>
+        </ul>
+        <button class="btn" type="submit">Buy Now &mdash; One-time</button>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <p class="small muted mt-m">Secure payment by Stripe. Your license key appears on screen right after payment and is also emailed to you. Need more than one seat? Buy one license per seat. Full refund on request within 14 days of purchase. Up to 2 machine transfers per license in any 12 months.</p>
+  </div>
+</section>
+
+<section aria-labelledby="disc-title">
+  <div class="wrap">
+    <h2 id="disc-title">Important</h2>
+    <p class="disclaimer" id="disclaimer"><strong>Diagnostic tool only.</strong> AMCDT helps your engineers find and understand differences between model and code outputs. It is not a functional-safety tool and does not establish that any model, code, or product is correct or safe. Mercy Systems makes no ISO&nbsp;26262 (or other safety-standard) claims for AMCDT, and no tool qualification or certification evidence is provided. Your own engineering review and safety processes remain your responsibility. See the <a href="license.html">License Agreement</a>.</p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>&copy; <span data-year>2026</span> Mercy Systems &middot; <a href="/">mercysystems.com</a> &middot; Precision Technology</div>
+    <div><a href="license.html">License Agreement</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="download.html">Download</a> &middot; <a href="trial.html">Free trial</a> &middot; <a href="manage.html">Manage subscription</a></div>
+    <div>Support: <a href="mailto:danny@mercysystems.com">danny@mercysystems.com</a> &middot; Mercy Systems, 398 Log Road, Spring City, Tennessee 37381</div>
+  </div>
+</footer>
+</body>
+</html>
