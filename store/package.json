@@ -2,13 +2,14 @@
   "name": "amcdt-store-server",
   "version": "1.0.0",
   "private": true,
-  "description": "Checkout, license delivery and webhook backend for the AMCDT pages on mercysystems.com (DigitalOcean App Platform service)",
+  "description": "Checkout, license delivery and webhook backend for AMCDT and Any Video to 4K on mercysystems.com (DigitalOcean App Platform service)",
   "main": "src/server.js",
   "engines": {
     "node": "22.x"
   },
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "test": "node --test --test-concurrency=1 test/"
   },
   "license": "UNLICENSED",
   "dependencies": {

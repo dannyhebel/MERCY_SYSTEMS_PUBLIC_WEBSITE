@@ -20,4 +20,18 @@
     }
   });
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+  // After Stripe Payment Link success redirect: /4k/?subscribed=1
+  try {
+    var params = new URLSearchParams(window.location.search || '');
+    if (params.get('subscribed') === '1') {
+      var banner = document.querySelector('[data-subscribed-banner]');
+      if (banner) {
+        banner.hidden = false;
+        banner.setAttribute('tabindex', '-1');
+        banner.focus({ preventScroll: true });
+        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  } catch (e) { /* ignore */ }
 })();

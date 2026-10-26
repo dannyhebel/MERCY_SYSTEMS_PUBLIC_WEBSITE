@@ -52,6 +52,8 @@ function loadConfig(env = process.env) {
       priceMonthly: env.STRIPE_PRICE_MONTHLY || '',
       priceAnnual: env.STRIPE_PRICE_ANNUAL || '',
       pricePerpetual: env.STRIPE_PRICE_PERPETUAL || '',
+      // Any Video to 4K ($4.99/mo). Empty = 4K fulfillment disabled (AMCDT unchanged).
+      priceAny2k: env.STRIPE_PRICE_ANY2K || '',
       automaticTax: bool(env.STRIPE_AUTOMATIC_TAX, false),
       taxIdCollection: bool(env.STRIPE_TAX_ID_COLLECTION, true),
       allowPromotionCodes: bool(env.STRIPE_ALLOW_PROMOTION_CODES, false),
@@ -62,6 +64,9 @@ function loadConfig(env = process.env) {
       portalConfigurationId: env.STRIPE_PORTAL_CONFIGURATION_ID || '',
     },
 
+    // Public product page for Any Video to 4K (used in the unlock-key email).
+    siteUrlAny2k: (env.SITE_URL_ANY2K || 'https://mercysystems.com/4k').replace(/\/+$/, ''),
+
     keygen: {
       apiUrl: (env.KEYGEN_API_URL || 'https://api.keygen.sh').replace(/\/+$/, ''),
       accountId: env.KEYGEN_ACCOUNT_ID || '',
@@ -71,6 +76,8 @@ function loadConfig(env = process.env) {
       policyAnnual: env.KEYGEN_POLICY_ANNUAL || '',
       policyPerpetual: env.KEYGEN_POLICY_PERPETUAL || '',
       policyTrial: env.KEYGEN_POLICY_TRIAL || '',
+      // Any Video to 4K Monthly policy (floating, max 2 machines).
+      policyAny2k: env.KEYGEN_POLICY_ANY2K || '',
     },
 
     trial: {

@@ -57,20 +57,38 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
     markTrialConverted: db.prepare(`UPDATE trials SET converted_session_id = ?, updated_at = ? WHERE keygen_id = ? AND converted_session_id IS NULL`),
   };
 
-  const SUBSCRIPTION_PLANS = ['monthly', 'annual'];
+  const SUBSCRIPTION_PLANS = ['monthly', 'annual', 'any2k'];
   const isSubscription = (plan) => SUBSCRIPTION_PLANS.includes(plan);
+  const isAny2k = (plan) => plan === 'any2k';
 
   function planForPrice(priceId) {
     if (priceId && priceId === config.stripe.priceMonthly) return 'monthly';
     if (priceId && priceId === config.stripe.priceAnnual) return 'annual';
     if (priceId && priceId === config.stripe.pricePerpetual) return 'perpetual';
+    if (priceId && config.stripe.priceAny2k && priceId === config.stripe.priceAny2k) return 'any2k';
     return null;
   }
 
   function policyFor(plan) {
     if (plan === 'monthly') return config.keygen.policyMonthly;
     if (plan === 'annual') return config.keygen.policyAnnual;
+    if (plan === 'any2k') return config.keygen.policyAny2k;
     return config.keygen.policyPerpetual;
+  }
+
+  function maxMachinesFor(plan) {
+    // Any Video to 4K: one key unlocks 1 phone + 1 computer.
+    return isAny2k(plan) ? 2 : 1;
+  }
+
+  function productNameFor(plan) {
+    return isAny2k(plan) ? 'Any Video to 4K' : 'AMCDT';
+  }
+
+  /** Expiry ISO for a paid subscription period. AMCDT adds grace; Any2K uses period end only. */
+  function expiryForPeriodEnd(plan, periodEndSec) {
+    const extra = isAny2k(plan) ? 0 : graceSec;
+    return new Date((periodEndSec + extra) * 1000).toISOString();
   }
 
   /** Works with both current (invoice.parent.subscription_details) and older invoice shapes. */
@@ -90,8 +108,7 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
   }
 
   function subscriptionExpiryIso(periodEndSec) {
-    // Licence stays valid through the paid period PLUS the 14-day grace window,
-    // so a failed renewal never cuts a customer off before the grace ends.
+    // AMCDT default: paid period PLUS the 14-day grace window.
     return new Date((periodEndSec + graceSec) * 1000).toISOString();
   }
 
@@ -124,7 +141,7 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
     const items = session.line_items?.data || [];
     const ours = items.map((li) => ({ plan: planForPrice(li.price?.id), qty: li.quantity || 0 })).filter((x) => x.plan);
     if (!ours.length) {
-      log.warn?.(`[fulfil] session ${sessionId} has no AMCDT price; ignoring`);
+      log.warn?.(`[fulfil] session ${sessionId} has no known Mercy Systems price; ignoring`);
       return { status: 'ignored' };
     }
     const plan = ours[0].plan;
@@ -166,11 +183,15 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
       let expiry = null;
       if (isSubscription(plan)) {
         if (!purchase.subscription_id) throw new Error(`${plan} purchase without subscription id`);
-        expiry = subscriptionExpiryIso(await subscriptionPeriodEnd(purchase.subscription_id));
+        expiry = expiryForPeriodEnd(plan, await subscriptionPeriodEnd(purchase.subscription_id));
+      }
+      if (isAny2k(plan) && !config.keygen.policyAny2k) {
+        throw new Error('Any Video to 4K price matched but KEYGEN_POLICY_ANY2K is not configured');
       }
       const have = new Set(q.licensesFor.all(sessionId).map((l) => l.seat_index));
       let createdNow = 0;
       let foundOld = 0;
+      let primaryLicenseId = null;
       for (let seat = 1; seat <= seats; seat += 1) {
         if (have.has(seat)) continue;
         // Crash-safety: if this seat was already created in Keygen, reuse it.
@@ -183,14 +204,15 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
         }
         const lic = found[0] || await keygen.createLicense({
           policyId: policyFor(plan),
-          name: `AMCDT ${plan} - seat ${seat} of ${seats}`,
+          name: `${productNameFor(plan)} ${plan} - seat ${seat} of ${seats}`,
           expiry,
-          maxMachines: 1,
+          maxMachines: maxMachinesFor(plan),
           metadata: {
             stripeSessionId: sessionId,
             seatIndex: String(seat),
             seats: String(seats),
             kind: 'paid',
+            product: isAny2k(plan) ? 'any2k' : 'amcdt',
             plan,
             stripeCustomerId: purchase.customer_id || '',
             stripeSubscriptionId: purchase.subscription_id || '',
@@ -200,6 +222,7 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
             trialLicenseId: purchase.trial_license_id || '',
           },
         });
+        primaryLicenseId = primaryLicenseId || lic.id;
         q.insertLicense.run(sessionId, seat, lic.id, lic.key, lic.expiry || expiry, t, t);
         if (found[0] && found[0].suspended) {
           // Rebuilt after a restart: keep Keygen's suspension visible locally.
@@ -207,6 +230,10 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
           if (row) q.setLicenseState.run('suspended', t, row.id);
           q.setAccess.run('suspended', 'unknown', t, sessionId);
         }
+      }
+      // Idempotent cross-store: remember the Keygen license id on the Stripe subscription/customer.
+      if (primaryLicenseId) {
+        await writeStripeLicenseMetadata(purchase, plan, primaryLicenseId);
       }
       q.markFulfilled.run(nowSec(), sessionId);
       if (!hadLocalRecord && createdNow === 0 && foundOld > 0 && foundOld === seats) {
@@ -224,11 +251,39 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
     return { status: 'fulfilled', purchase: q.getPurchase.get(sessionId), licenses: publicLicenses(sessionId) };
   }
 
+  async function writeStripeLicenseMetadata(purchase, plan, licenseId) {
+    const metaKey = isAny2k(plan) ? 'any2k_keygen_license_id' : 'amcdt_keygen_license_id';
+    const product = isAny2k(plan) ? 'any2k' : 'amcdt';
+    try {
+      if (purchase.subscription_id && stripe.subscriptions?.update) {
+        await stripe.subscriptions.update(purchase.subscription_id, {
+          metadata: { [metaKey]: licenseId, product, plan },
+        });
+      }
+      if (purchase.customer_id && stripe.customers?.update) {
+        await stripe.customers.update(purchase.customer_id, {
+          metadata: { [metaKey]: licenseId },
+        });
+      }
+    } catch (err) {
+      // Non-fatal: Keygen metadata + local DB still provide idempotency.
+      log.warn?.(`[fulfil] could not write Stripe license metadata: ${err.message}`);
+    }
+  }
+
   async function maybeSendEmail(purchase) {
     if (purchase.emailed_at || purchase.email_attempts >= 5 || !purchase.customer_email || !mailer) return;
-    const { buildLicenseEmail } = require('./mailer');
+    const { buildLicenseEmail, buildAny2kEmail } = require('./mailer');
     const licenses = q.licensesFor.all(purchase.session_id);
-    const msg = buildLicenseEmail({ purchase, licenses, siteUrl: config.siteUrl, productVersion: config.productVersion || '[VERSION]', supportEmail: config.supportEmail });
+    const msg = isAny2k(purchase.plan)
+      ? buildAny2kEmail({
+          purchase,
+          licenses,
+          siteUrl: config.siteUrlAny2k || 'https://mercysystems.com/4k',
+          manageUrl: config.stripe.portalLoginUrl || 'https://billing.stripe.com/p/login/5kQfZggFBacC0rT1Rnak000',
+          supportEmail: config.supportEmail,
+        })
+      : buildLicenseEmail({ purchase, licenses, siteUrl: config.siteUrl, productVersion: config.productVersion || '[VERSION]', supportEmail: config.supportEmail });
     try {
       await mailer.send({ to: purchase.customer_email, ...msg });
       q.emailed.run(nowSec(), nowSec(), purchase.session_id);
@@ -381,7 +436,7 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
         }
         const ends = (obj.lines?.data || []).map((l) => l.period?.end).filter(Boolean);
         const periodEnd = ends.length ? Math.max(...ends) : await subscriptionPeriodEnd(subId);
-        const expiry = subscriptionExpiryIso(periodEnd);
+        const expiry = expiryForPeriodEnd(purchase.plan, periodEnd);
         for (const l of q.licensesFor.all(purchase.session_id)) {
           if (l.state === 'revoked') continue;
           if (l.expiry !== expiry) {
@@ -402,17 +457,27 @@ function createFulfillment({ db, stripe, keygen, mailer, config, now = () => Dat
         const subId = subscriptionIdFromInvoice(obj);
         const purchase = subId && await purchaseBySubscription(subId);
         if (!purchase) { result = { handled: false }; break; }
-        if (!purchase.grace_until) {
-          q.setGrace.run(nowSec() + graceSec, nowSec(), purchase.session_id);
+        if (isAny2k(purchase.plan)) {
+          // Any Video to 4K: suspend the unlock key as soon as a renewal payment fails.
+          if (purchase.access === 'active') await suspendPurchase(purchase, 'payment_failed');
+          result = { handled: true, suspended: true };
+        } else {
+          if (!purchase.grace_until) {
+            q.setGrace.run(nowSec() + graceSec, nowSec(), purchase.session_id);
+          }
+          result = { handled: true, grace_until: q.getPurchase.get(purchase.session_id).grace_until };
         }
-        result = { handled: true, grace_until: q.getPurchase.get(purchase.session_id).grace_until };
         break;
       }
 
       case 'customer.subscription.deleted': {
         const purchase = await purchaseBySubscription(obj.id);
         if (!purchase) { result = { handled: false }; break; }
-        if (purchase.grace_until && purchase.grace_until > nowSec()) {
+        if (isAny2k(purchase.plan)) {
+          // Cancelled Any Video to 4K subscription: suspend the key immediately.
+          if (purchase.access === 'active') await suspendPurchase(purchase, 'subscription_ended');
+          result = { handled: true, suspended: true };
+        } else if (purchase.grace_until && purchase.grace_until > nowSec()) {
           // Still inside the 14-day grace: the grace sweep suspends at grace_until.
           result = { handled: true, deferred_until: purchase.grace_until };
         } else if (purchase.access === 'active') {

@@ -1,0 +1,23 @@
+Hi {{NAME}},
+
+Thanks for subscribing to Any Video to 4K.
+
+Your unlock key:
+{{KEY}}
+
+{{PRICE_LINE}}
+{{DEVICE_LINE}}
+
+How to use it:
+1. Open Any Video to 4K on your phone or Windows computer.
+2. Paste this unlock key when the app asks for it.
+3. You are all set. The same key works on 1 phone + 1 computer.
+
+Manage or cancel your subscription anytime:
+{{MANAGE_URL}}
+
+Questions? Just reply to this email or write to {{SUPPORT_EMAIL}}.
+
+Thank you,
+Mercy Systems
+{{SITE_URL}}

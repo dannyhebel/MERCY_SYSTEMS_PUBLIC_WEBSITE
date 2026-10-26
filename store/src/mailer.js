@@ -87,4 +87,33 @@ function createSmtpMailer(smtp) {
   };
 }
 
-module.exports = { buildLicenseEmail, buildTrialEmail, createSmtpMailer, escapeHtml };
+
+/** Build the Any Video to 4K unlock-key email. Plain friendly wording; no internals. */
+function buildAny2kEmail({
+  purchase,
+  licenses,
+  siteUrl = 'https://mercysystems.com/4k',
+  manageUrl = 'https://billing.stripe.com/p/login/5kQfZggFBacC0rT1Rnak000',
+  supportEmail = 'danny@mercysystems.com',
+}) {
+  const key = licenses[0]?.license_key || '';
+  const name = purchase.customer_name || 'there';
+  const common = {
+    NAME: name,
+    KEY: key,
+    MANAGE_URL: manageUrl,
+    SITE_URL: siteUrl.replace(/\/+$/, ''),
+    SUPPORT_EMAIL: supportEmail,
+    PRICE_LINE: '$4.99/month for UNLIMITED 4K videos',
+    DEVICE_LINE: 'Works on 1 phone + 1 computer',
+  };
+  const text = fill(fs.readFileSync(path.join(TEMPLATE_DIR, 'any2k-email.txt'), 'utf8'), common);
+  const html = fill(fs.readFileSync(path.join(TEMPLATE_DIR, 'any2k-email.html'), 'utf8'), {
+    ...Object.fromEntries(Object.entries(common).map(([k, v]) => [k, escapeHtml(v)])),
+    NAME: escapeHtml(name),
+    KEY: escapeHtml(key),
+  });
+  return { subject: 'Your Any Video to 4K unlock key', text, html };
+}
+
+module.exports = { buildLicenseEmail, buildTrialEmail, buildAny2kEmail, createSmtpMailer, escapeHtml };

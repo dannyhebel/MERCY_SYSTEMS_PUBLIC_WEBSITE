@@ -1,0 +1,7 @@
+
+# Node
+node_modules/
+store/node_modules/
+store/data/
+*.sqlite
+.env
