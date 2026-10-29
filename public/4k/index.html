@@ -39,31 +39,36 @@
 <main id="main">
 <section class="hero" aria-labelledby="hero-title"><div class="wrap">
  <picture>
-  <source type="image/webp" srcset="/4k/assets/img/logo-320.webp 320w, /4k/assets/img/logo-640.webp 640w" sizes="300px">
-  <img class="logo" src="/4k/assets/img/logo-640.jpg" srcset="/4k/assets/img/logo-320.jpg 320w, /4k/assets/img/logo-640.jpg 640w" sizes="300px" width="640" height="640" alt="Any Video to 4K">
+  <source type="image/webp" srcset="/4k/assets/img/logo-320.webp 320w, /4k/assets/img/logo-640.webp 640w" sizes="(max-width: 760px) 132px, 210px">
+  <img class="logo" src="/4k/assets/img/logo-640.jpg" srcset="/4k/assets/img/logo-320.jpg 320w, /4k/assets/img/logo-640.jpg 640w" sizes="(max-width: 760px) 132px, 210px" width="640" height="640" alt="Any Video to 4K">
  </picture>
- <h1 id="hero-title">Turn <span>ANY</span> video into 4K.</h1>
- <p class="lead"><b>$4.99/month for UNLIMITED 4K videos.</b> One subscription covers your phone AND your computer.</p>
- <a class="btn" href="mailto:danny@mercysystems.com?subject=Subscribe%20to%20Any%20Video%20to%204K" data-subscribe>Subscribe</a>
- <div class="thanks" data-subscribed-banner hidden role="status" aria-live="polite">
-  <strong>You are subscribed.</strong> Check your email for your unlock key.
-  <span>It usually arrives within a minute. Then paste the key into the phone app or the Windows app.</span>
+ <div class="stage" id="download">
+  <picture class="model">
+   <source type="image/webp" srcset="/4k/assets/img/creator-woman.webp">
+   <img src="/4k/assets/img/creator-woman.jpg" width="508" height="1168" alt="" decoding="async" fetchpriority="high">
+  </picture>
+  <div class="cta">
+   <!-- Downloads: ANDROID_DOWNLOAD_URL / WINDOWS_DOWNLOAD_URL in /4k/assets/js/config.js. -->
+   <a class="try-btn is-todo" data-link="ANDROID_DOWNLOAD_URL"><svg width="30" height="30" viewBox="0 0 24 24" fill="#D4AF37" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18a.38.38 0 00-.66-.38l-1.87 3.23a11.4 11.4 0 00-9.82 0L5.22 5.92a.38.38 0 00-.66.38L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg><span><span class="t">Try for free</span><span class="s">Android phone</span></span></a>
+   <a class="try-btn is-todo" data-link="WINDOWS_DOWNLOAD_URL"><svg width="28" height="28" viewBox="0 0 24 24" fill="#D4AF37" aria-hidden="true"><path d="M2 4.5l8.2-1.1v7.9H2V4.5zm9.2-1.3L22 1.7v9.6H11.2V3.2zM2 12.3h8.2v7.9L2 19.1v-6.8zm9.2 0H22v9.9l-10.8-1.5v-8.4z"/></svg><span><span class="t">Try for free</span><span class="s">Windows PC</span></span></a>
+   <a class="btn unlock" href="mailto:danny@mercysystems.com?subject=Subscribe%20to%20Any%20Video%20to%204K" data-subscribe>Unlock UNLIMITED 4K videos</a>
+   <div class="thanks" data-subscribed-banner hidden role="status" aria-live="polite">
+    <strong>You are subscribed.</strong> Check your email for your unlock key.
+    <span>It usually arrives within a minute. Then paste the key into the phone app or the Windows app.</span>
+   </div>
+   <p class="fine"><b>$4.99/month.</b> Cancel anytime. Google Pay accepted.</p>
+   <h1 id="hero-title">Turn <span>ANY</span> video into 4K.</h1>
+   <p class="lead">One subscription covers your phone AND your computer.</p>
+  </div>
  </div>
- <p class="fine">Cancel anytime. Google Pay accepted.</p>
 </div></section>
 
-<section class="dl" id="download" aria-labelledby="dl-title"><div class="wrap">
- <div class="eyebrow">Download</div><h2 id="dl-title">Download free — try one video free.</h2>
- <!-- Downloads: ANDROID_DOWNLOAD_URL / WINDOWS_DOWNLOAD_URL in /4k/assets/js/config.js. -->
- <div class="dl-btns">
-  <a class="dlb is-todo" data-link="ANDROID_DOWNLOAD_URL"><svg width="36" height="36" viewBox="0 0 24 24" fill="#D4AF37" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18a.38.38 0 00-.66-.38l-1.87 3.23a11.4 11.4 0 00-9.82 0L5.22 5.92a.38.38 0 00-.66.38L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg><span><span class="t">Android phone</span><span class="s">Direct APK download</span></span></a>
-  <a class="dlb is-todo" data-link="WINDOWS_DOWNLOAD_URL"><svg width="34" height="34" viewBox="0 0 24 24" fill="#D4AF37" aria-hidden="true"><path d="M2 4.5l8.2-1.1v7.9H2V4.5zm9.2-1.3L22 1.7v9.6H11.2V3.2zM2 12.3h8.2v7.9L2 19.1v-6.8zm9.2 0H22v9.9l-10.8-1.5v-8.4z"/></svg><span><span class="t">Windows PC</span><span class="s">Desktop installer</span></span></a>
- </div>
+<section class="dl" id="install" aria-labelledby="dl-title"><div class="wrap">
+ <div class="eyebrow">Install tips</div><h2 id="dl-title">Try one video free.</h2>
  <div class="dl-help">
   <p><b>Android:</b> after it downloads, tap the file. If your phone asks, allow installs from your browser, then tap Install.</p>
   <p><b>Windows:</b> Windows may show a SmartScreen &ldquo;Windows protected your PC&rdquo; notice. Click More info, then Run anyway (the installer isn&rsquo;t code-signed yet).</p>
  </div>
- <p class="try">Try one video free first.</p>
 </div></section>
 
 <section class="examples" aria-labelledby="ex-title"><div class="wrap">

@@ -28,14 +28,24 @@ section{padding:96px 0;border-top:1px solid #141414}
 .nav-right a.link:hover{color:var(--gold)}
 .nav-right a.sub{font-weight:700;font-size:14px;color:var(--gold);text-decoration:none;border:1px solid var(--gold);padding:9px 20px;border-radius:999px}
 
-/* hero */
-.hero{border-top:none;padding:48px 0 104px;text-align:center;background:radial-gradient(ellipse 70% 55% at 50% 30%,rgba(212,175,55,.16),transparent 70%)}
-.hero .logo{width:300px;max-width:70%;height:auto;margin:20px auto 10px;display:block;border-radius:28px;filter:drop-shadow(0 0 40px rgba(212,175,55,.25))}
-.hero h1{font-size:76px;line-height:1.04;letter-spacing:-.02em;margin:18px 0 22px}
+/* hero: logo, two "Try for free" downloads and the unlock button on the left, creator photo on the right */
+.hero{border-top:none;padding:28px 0 40px;background:radial-gradient(ellipse 34% 26% at 50% 14%,rgba(212,175,55,.14),transparent 70%)}
+.stage{position:relative;max-width:840px;margin:0 auto;min-height:720px;display:flex;align-items:flex-start}
+.stage .model{position:absolute;right:0;top:0;bottom:0;z-index:0;pointer-events:none}
+.stage .model img{display:block;height:100%;width:auto;max-width:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 24%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0,#000 10%,#000 84%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 24%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0,#000 10%,#000 84%,transparent 100%);mask-composite:intersect}
+.cta{position:relative;z-index:2;width:440px;max-width:100%;display:flex;flex-direction:column;align-items:stretch;text-align:center}
+.hero .logo{width:210px;height:auto;margin:0 auto 22px;display:block;border-radius:28px;filter:drop-shadow(0 0 40px rgba(212,175,55,.25))}
+.try-btn{display:flex;align-items:center;gap:16px;text-decoration:none;background:rgba(12,11,8,.88);border:1.5px solid var(--gold);border-radius:18px;padding:18px 24px;margin-bottom:14px;text-align:left;box-shadow:0 8px 30px rgba(0,0,0,.5),0 0 24px rgba(212,175,55,.12)}
+.try-btn svg{flex:none}
+.try-btn .t{display:block;font-weight:700;font-size:24px;line-height:1.15;color:var(--gold2)}
+.try-btn .s{display:block;font-size:16px;line-height:1.3;color:#f2f2f2;margin-top:2px}
+.btn.unlock{margin-top:4px;padding:20px 22px;font-size:21px;line-height:1.25;text-align:center}
+.hero .fine{margin-top:12px;color:#bdbdbd;font-size:14px;line-height:1.45}
+.hero .fine b{color:var(--gold)}
+.hero h1{font-size:34px;line-height:1.1;letter-spacing:-.01em;margin:22px 0 8px}
 .hero h1 span{background:linear-gradient(180deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{font-size:22px;color:#e8e8e8;max-width:720px;margin:0 auto 40px}
-.hero p.lead b{color:var(--gold);font-weight:700}
-.hero .fine{margin-top:18px;color:var(--muted);font-size:14px}
+.hero p.lead{font-size:16px;color:#e0e0e0;line-height:1.45}
+.hero .thanks{margin:14px 0 0}
 .thanks{max-width:560px;margin:0 auto 28px;padding:18px 22px;border:1px solid var(--gold);border-radius:16px;background:rgba(212,175,55,.12);color:#f5f5f5;text-align:center}
 .thanks strong{display:block;color:var(--gold2);font-size:18px;margin-bottom:6px}
 .thanks span{display:block;color:#d9d9d9;font-size:15px;margin-top:6px;line-height:1.45}
@@ -64,15 +74,9 @@ section{padding:96px 0;border-top:1px solid #141414}
 
 /* download */
 .dl{text-align:center}
-.dl-btns{display:flex;gap:20px;justify-content:center;margin:44px 0 22px;flex-wrap:wrap}
-.dlb{display:flex;align-items:center;gap:16px;min-width:300px;text-decoration:none;background:#0d0d0d;border:1.5px solid var(--gold);border-radius:16px;padding:18px 28px;text-align:left}
-.dlb svg{flex:none}
-.dlb .t{font-weight:700;font-size:20px;display:block}
-.dlb .s{font-size:13px;color:var(--muted);display:block}
-.dl .try{color:var(--gold);font-weight:700;font-size:18px}
+.dl h2{margin-bottom:28px}
 /* "Coming soon" marker, shown automatically while a link in config.js is still empty */
 .soon{display:none;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#000;background:var(--gold);border-radius:999px;padding:3px 9px;margin-left:8px;vertical-align:middle;white-space:nowrap}
-.dlb .soon{margin:6px 0 0;display:none;width:max-content}
 .is-todo .soon{display:inline-block}
 .is-todo{cursor:default}
 
@@ -115,16 +119,28 @@ section{padding:96px 0;border-top:1px solid #141414}
  .nav-right{gap:14px}
  .nav-right a.link{display:none}
  .nav-right a.sub{padding:8px 14px;font-size:13px}
- .hero{padding:28px 0 72px}
- .hero h1{font-size:44px}
- .hero p.lead{font-size:18px}
  .btn{padding:18px 40px;font-size:18px;width:100%;max-width:340px}
+ .hero{padding:14px 0 24px}
+ .stage{min-height:0}
+ .stage .model{right:-18px;top:-6px;bottom:-24px}
+ .cta{width:60%;min-width:210px}
+ .hero .logo{width:132px;margin-bottom:14px;border-radius:20px}
+ .try-btn{gap:10px;padding:12px 12px;margin-bottom:10px;border-radius:14px}
+ .try-btn svg{width:26px;height:26px}
+ .try-btn .t{font-size:19px}
+ .try-btn .s{font-size:14px}
+ .btn.unlock{padding:15px 12px;font-size:17px;max-width:none}
+ .hero .fine{font-size:13px}
+ .hero h1{font-size:25px;margin-top:16px}
+ .hero p.lead{font-size:14px}
+ .hero .thanks{padding:12px 12px;font-size:14px;line-height:1.4}
+ .hero .thanks strong{font-size:16px}
+ .hero .thanks span{font-size:13px}
  .examples h2.sec,.how h2,.dl h2,.faq h2,.pricing h2{font-size:32px}
  .ex h3{font-size:28px}
  .ex{margin-bottom:64px}
  .ex figure{border-radius:12px}
  .steps{grid-template-columns:1fr;gap:16px;margin-top:36px}
- .dlb{min-width:0;width:100%}
  .pbox{padding:40px 24px}
  .pbox .price{font-size:56px}
  .footer-bottom{flex-direction:column;text-align:center;justify-content:center}
