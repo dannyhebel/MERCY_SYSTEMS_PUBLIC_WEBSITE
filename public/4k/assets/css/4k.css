@@ -31,7 +31,7 @@ section{padding:96px 0;border-top:1px solid #141414}
 /* hero: logo, two "Try for free" downloads and the unlock button on the left, creator photo on the right */
 .hero{border-top:none;padding:28px 0 40px;background:radial-gradient(ellipse 34% 26% at 50% 14%,rgba(212,175,55,.14),transparent 70%)}
 .stage{position:relative;max-width:840px;margin:0 auto;min-height:720px;display:flex;align-items:flex-start}
-.stage .model{position:absolute;right:0;top:0;bottom:0;z-index:0;pointer-events:none}
+.stage .model{position:absolute;right:0;top:0;bottom:0;z-index:0;display:block;pointer-events:none}
 .stage .model img{display:block;height:100%;width:auto;max-width:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 24%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0,#000 10%,#000 84%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 24%,#000 88%,transparent 100%),linear-gradient(180deg,transparent 0,#000 10%,#000 84%,transparent 100%);mask-composite:intersect}
 .cta{position:relative;z-index:2;width:440px;max-width:100%;display:flex;flex-direction:column;align-items:stretch;text-align:center}
 .hero .logo{width:210px;height:auto;margin:0 auto 22px;display:block;border-radius:28px;filter:drop-shadow(0 0 40px rgba(212,175,55,.25))}
@@ -122,7 +122,8 @@ section{padding:96px 0;border-top:1px solid #141414}
  .btn{padding:18px 40px;font-size:18px;width:100%;max-width:340px}
  .hero{padding:14px 0 24px}
  .stage{min-height:0}
- .stage .model{right:-18px;top:-6px;bottom:-24px}
+ .stage .model{right:-12px;top:-40px;bottom:-30px}
+ .hero .logo{position:relative;z-index:3}
  .cta{width:60%;min-width:210px}
  .hero .logo{width:132px;margin-bottom:14px;border-radius:20px}
  .try-btn{gap:10px;padding:12px 12px;margin-bottom:10px;border-radius:14px}
