@@ -1,0 +1,2 @@
+'use strict';
+fetch('release.json',{cache:'no-store'}).then(r=>r.json()).then(r=>{if(!r.available)return;for(let name of ['android','windows']){let url=r.downloads?.[name];if(!url)continue;let u=new URL(url,location.href);if(u.protocol!=='https:'||u.hostname!=='mercysystems.com')continue;let b=document.getElementById(name);b.disabled=false;b.replaceChildren(document.createTextNode('↓ Download for '+(name==='android'?'Android':'Windows')));b.onclick=()=>location.assign(u.href)}document.getElementById('release').hidden=true}).catch(()=>{});
