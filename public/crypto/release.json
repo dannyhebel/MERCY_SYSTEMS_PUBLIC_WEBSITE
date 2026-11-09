@@ -1,1 +1,16 @@
-{"available":false,"version":"1.0.0","downloads":{"android":"","windows":""}}
+{
+  "available": true,
+  "version": "1.0.0",
+  "tag": "crs-v1.0.0",
+  "downloads": {
+    "android": "https://github.com/dannyhebel/MERCY_SYSTEMS_PUBLIC_WEBSITE/releases/download/crs-v1.0.0/Crypto-Rebound-Scanner-1.0.0-Android.apk",
+    "windows": "https://github.com/dannyhebel/MERCY_SYSTEMS_PUBLIC_WEBSITE/releases/download/crs-v1.0.0/Crypto-Rebound-Scanner-1.0.0-Setup-x64.exe",
+    "notices": "https://github.com/dannyhebel/MERCY_SYSTEMS_PUBLIC_WEBSITE/releases/download/crs-v1.0.0/THIRD_PARTY_NOTICES.txt",
+    "sha256sums": "https://github.com/dannyhebel/MERCY_SYSTEMS_PUBLIC_WEBSITE/releases/download/crs-v1.0.0/SHA256SUMS.txt"
+  },
+  "sha256": {
+    "android": "669246b883bca73dc42c898f3d85e13a547a6900da4d6f8f8874e28c56d9d401",
+    "windows": "5a9818eb409b69f9defc165ffd23827acf955258abb5b78a60d51ee69a20c0eb",
+    "notices": "9e9a466f4abc5e7ee0c05d0daa9bad089d47295cc3b92cc6718f7a72fc34f69f"
+  }
+}
