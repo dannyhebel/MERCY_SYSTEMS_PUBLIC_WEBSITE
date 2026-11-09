@@ -9,8 +9,8 @@
     "sha256sums": "https://github.com/dannyhebel/MERCY_SYSTEMS_PUBLIC_WEBSITE/releases/download/crs-v1.0.0/SHA256SUMS.txt"
   },
   "sha256": {
-    "android": "669246b883bca73dc42c898f3d85e13a547a6900da4d6f8f8874e28c56d9d401",
-    "windows": "5a9818eb409b69f9defc165ffd23827acf955258abb5b78a60d51ee69a20c0eb",
+    "android": "fec2aac41d26b1896eab0a15cd7aaebc5daeba0af6269957df17bc63df753306",
+    "windows": "d953c7caceac4f37dccda0d73df20d6a2244d2e16f5627ee99241b92f6c4ad2d",
     "notices": "9e9a466f4abc5e7ee0c05d0daa9bad089d47295cc3b92cc6718f7a72fc34f69f"
   }
 }
