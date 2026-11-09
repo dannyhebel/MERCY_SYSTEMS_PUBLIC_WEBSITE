@@ -4,8 +4,8 @@
 <div class="downloads" aria-label="App downloads"><button id="android" disabled>↓ Download for Android</button><button id="windows" disabled>↓ Download for Windows</button></div>
 <div class="rebound-counter" id="reboundCounter" hidden>
 <span class="rebound-num" id="reboundCount">—</span>
-<span class="rebound-label">rebounds since launch</span>
-<span class="rebound-note">Price rose back above where we flagged it.</span>
+<span class="rebound-label" id="reboundLabel">rebounds since launch</span>
+<span class="rebound-note" id="reboundNote">Price rose back above where we flagged it.</span>
 </div>
 </div><p class="fine">7-day device-based trial · No card required · Then $4.99/month introductory price<br>One Android device + one Windows device per subscription. US-only subscriptions.</p><p class="release" id="release">Loading download links…</p><p class="fine founder-note">Developed by Mercy Systems, whose founder published the Hebel Sparse Exact-Scale Method in 2026.</p></section>
 <section class="showcase"><img src="/crypto/assets/desktop-design.png" alt="Crypto Rebound Scanner desktop app"><p class="fine">Live app layout. Results change with each published market update.</p></section>
@@ -18,11 +18,24 @@
   var el=document.getElementById('reboundCounter');
   var num=document.getElementById('reboundCount');
   if(!el||!num)return;
+  var label=document.getElementById('reboundLabel');
+  var note=document.getElementById('reboundNote');
   fetch('https://scanner.mercysystems.com/v1/public/rebounds',{credentials:'omit',mode:'cors'})
     .then(function(r){if(!r.ok)throw new Error('bad');return r.json()})
     .then(function(d){
       if(typeof d.rebounds_since_launch!=='number')throw new Error('bad');
-      num.textContent=d.rebounds_since_launch.toLocaleString();
+      var n=d.rebounds_since_launch;
+      var flagged=typeof d.flagged_since_launch==='number'?d.flagged_since_launch:null;
+      num.textContent=n.toLocaleString();
+      if(n===0){
+        if(label) label.textContent=flagged!=null
+          ? ('rebounds so far · tracking '+flagged.toLocaleString()+' flagged since launch')
+          : 'rebounds so far';
+        if(note) note.textContent='Counts only when a flagged coin\'s price later rises back above the flag price.';
+      } else {
+        if(label) label.textContent='rebounds since launch';
+        if(note) note.textContent='Price rose back above where we flagged it.';
+      }
       el.hidden=false;
     }).catch(function(){el.hidden=true});
 })();
