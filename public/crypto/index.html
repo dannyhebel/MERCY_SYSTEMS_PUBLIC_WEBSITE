@@ -4,7 +4,7 @@
 <div class="downloads" aria-label="App downloads"><button id="android" disabled>↓ Download for Android</button><button id="windows" disabled>↓ Download for Windows</button></div>
 <div class="rebound-counter" id="reboundCounter" hidden>
 <span class="rebound-num" id="reboundCount">—</span>
-<span class="rebound-label" id="reboundLabel">rebounds since launch</span>
+<span class="rebound-label" id="reboundLabel">Rebounds since launch (November 8, 2026)</span>
 <span class="rebound-note" id="reboundNote">Price rose back above where we flagged it.</span>
 </div>
 </div><p class="fine">7-day device-based trial · No card required · Then $4.99/month introductory price<br>One Android device + one Windows device per subscription. US-only subscriptions.</p><p class="release" id="release">Loading download links…</p><p class="fine founder-note">Developed by Mercy Systems, whose founder published the Hebel Sparse Exact-Scale Method in 2026.</p></section>
@@ -27,13 +27,14 @@
       var n=d.rebounds_since_launch;
       var flagged=typeof d.flagged_since_launch==='number'?d.flagged_since_launch:null;
       num.textContent=n.toLocaleString();
+      var dateLabel='Rebounds since launch (November 8, 2026)';
       if(n===0){
         if(label) label.textContent=flagged!=null
-          ? ('rebounds so far · tracking '+flagged.toLocaleString()+' flagged since launch')
-          : 'rebounds so far';
+          ? (dateLabel+' · tracking '+flagged.toLocaleString()+' flagged')
+          : dateLabel;
         if(note) note.textContent='Counts only when a flagged coin\'s price later rises back above the flag price.';
       } else {
-        if(label) label.textContent='rebounds since launch';
+        if(label) label.textContent=dateLabel;
         if(note) note.textContent='Price rose back above where we flagged it.';
       }
       el.hidden=false;
