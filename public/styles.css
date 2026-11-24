@@ -178,3 +178,49 @@ h2{font-size:33px}.lead{font-size:17px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button.gold:hover{transform:none}}
 .policy-nav{display:flex;align-items:center;gap:20px}
 .nowrap{white-space:nowrap}
+
+/* Footer projects link (homepage) */
+.footer-bottom a{color:#9a948a;text-decoration:none}
+.footer-bottom a:hover{color:var(--gold)}
+
+/* Project directory and Lunar Frontier pages */
+.download-band{padding:28px 0;background:#14120e;border-bottom:1px solid var(--line)}
+.download-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.download-band .button{min-height:58px;padding:16px 32px;font-size:16px}
+.download-meta{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.page-hero{padding:72px 0 28px}
+.page-hero .product-id{display:flex;align-items:center;gap:20px;margin-bottom:8px}
+.page-hero .product-id img{width:84px;height:84px;border-radius:16px;border:1px solid var(--line);background:#111}
+.page-hero h1{margin:10px 0 14px;font-size:clamp(36px,5vw,64px);line-height:1.05;letter-spacing:-.02em}
+.page-hero .lead{max-width:720px}
+.region-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0 0;padding:0;list-style:none}
+.region-list li{padding:14px 16px;background:#151412;border:1px solid var(--line);border-radius:4px;color:var(--goldlight);font-weight:600}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.detail-card{padding:24px;background:#151412;border:1px solid var(--line);border-radius:4px}
+.detail-card h3{margin:0 0 10px;color:var(--gold);font-size:16px}
+.detail-card p,.detail-card li{color:#c6c0b5}
+.detail-card ul{margin:0;padding-left:20px}
+.detail-card li{margin:6px 0}
+.hash{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.55;overflow-wrap:anywhere;color:#cfc9bc}
+.credit-list{display:grid;gap:16px;margin:0;padding:0;list-style:none;max-width:560px}
+.credit-list li{display:grid;gap:2px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.credit-list span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.credit-list strong{font-size:18px;font-weight:600}
+.project-intro{padding-top:72px;padding-bottom:20px}
+.project-intro h1{margin:10px 0 16px;font-size:clamp(36px,5vw,60px);line-height:1.05;letter-spacing:-.02em}
+.project-intro .lead{max-width:680px}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project-card{display:flex;flex-direction:column;padding:28px 24px;background:#151412;border:1px solid var(--line);border-top:2px solid #be9650;border-radius:4px;text-decoration:none;min-height:100%;transition:border-color .18s}
+.project-card:hover{border-color:var(--gold)}
+.project-card .eyebrow{margin:0 0 10px}
+.project-card h2{margin:0 0 12px;font-size:22px;line-height:1.25;color:var(--text)}
+.project-card p{margin:0 0 18px;color:var(--muted);flex:1}
+.project-card .text-link{margin-top:auto}
+@media(max-width:1000px){.project-grid{grid-template-columns:repeat(2,1fr)}.region-list{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr}}
+@media(max-width:760px){
+.project-grid,.region-list{grid-template-columns:1fr}
+.page-hero,.project-intro{padding-top:48px}
+.download-band .button{width:100%}
+.download-band .wrap{align-items:stretch}
+.page-hero .product-id img{width:68px;height:68px;border-radius:14px}
+}
